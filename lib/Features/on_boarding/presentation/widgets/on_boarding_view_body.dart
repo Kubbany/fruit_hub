@@ -1,6 +1,6 @@
-import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:fruit_hub/Core/utils/constants/colors.dart';
+import 'package:fruit_hub/Core/utils/widgets/custom_dots_indicator.dart';
 import 'package:fruit_hub/Features/on_boarding/domain/entities/on_boarding_page_view_entity.dart';
 import 'package:fruit_hub/Features/on_boarding/presentation/widgets/on_boarding_page_view_builder.dart';
 import 'package:fruit_hub/Features/on_boarding/presentation/widgets/visibilty_skip_button.dart';
@@ -32,15 +32,17 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
     return Column(
       children: <Widget>[
         Expanded(
-          child: OnBoardingPageViewBuilder(pageController: pageController),
-        ),
-        DotsIndicator(
-          dotsCount: onBoardingPageViewList.length,
-          position: currentPage.toDouble(),
-          decorator: const DotsDecorator(
-            color: AppColors.lightPrimaryColor,
-            activeColor: AppColors.primaryColor,
+          child: OnBoardingPageViewBuilder(
+            pageController: pageController,
           ),
+        ),
+        CustomDotsIndicator(
+          dotsCount: onBoardingPageViewList.length,
+          activeColor: AppColors.primaryColor,
+          color: AppColors.primaryColor.withAlpha(127),
+          margin: 5,
+          size: 11,
+          currentPage: currentPage,
         ),
         Padding(
           padding: const EdgeInsets.only(

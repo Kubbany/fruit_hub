@@ -43,7 +43,7 @@ class PageViewItem extends StatelessWidget {
         ),
         Padding(
           padding: const EdgeInsets.symmetric(
-            horizontal: 29,
+            horizontal: 37,
           ),
           child: TitleAndDescriptionSection(item: item),
         ),

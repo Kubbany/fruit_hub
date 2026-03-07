@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_hub/Core/services/prefs.dart';
-import 'package:fruit_hub/Features/auth/presentation/views/auth_view.dart';
+import 'package:fruit_hub/Features/auth/presentation/views/login_view.dart';
 import 'package:fruit_hub/Features/on_boarding/presentation/views/on_boarding_view.dart';
 import 'package:fruit_hub/Core/utils/constants/assets.dart';
 import 'package:fruit_hub/Core/utils/constants/strings.dart';
@@ -45,7 +45,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
       if (mounted) {
         bool skipToLogin = Prefs.getBool(AppStrings.skipToLogin);
         if (skipToLogin) {
-          Navigator.pushReplacementNamed(context, AuthView.routeName);
+          Navigator.pushReplacementNamed(context, LoginView.routeName);
           return;
         }
         Navigator.pushReplacementNamed(context, OnBoardingView.routeName);
