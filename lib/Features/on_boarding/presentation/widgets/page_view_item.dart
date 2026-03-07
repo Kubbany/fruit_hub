@@ -29,7 +29,12 @@ class PageViewItem extends StatelessWidget {
                 right: 0,
                 child: SvgPicture.asset(item.image),
               ),
-              const SkipToLoginButton(),
+              Padding(
+                padding: const EdgeInsets.all(16),
+                child: SkipToLoginButton(
+                  index: index,
+                ),
+              ),
             ],
           ),
         ),

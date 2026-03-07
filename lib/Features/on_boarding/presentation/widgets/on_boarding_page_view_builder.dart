@@ -5,11 +5,13 @@ import 'package:fruit_hub/Features/on_boarding/presentation/widgets/page_view_it
 class OnBoardingPageViewBuilder extends StatelessWidget {
   const OnBoardingPageViewBuilder({
     super.key,
+    required this.pageController,
   });
-
+  final PageController pageController;
   @override
   Widget build(BuildContext context) {
     return PageView.builder(
+      controller: pageController,
       itemBuilder: (context, index) {
         return PageViewItem(
           item: onBoardingPageViewList[index],

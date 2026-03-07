@@ -3,26 +3,63 @@ import 'package:flutter/material.dart';
 import 'package:fruit_hub/Core/utils/constants/colors.dart';
 import 'package:fruit_hub/Features/on_boarding/domain/entities/on_boarding_page_view_entity.dart';
 import 'package:fruit_hub/Features/on_boarding/presentation/widgets/on_boarding_page_view_builder.dart';
+import 'package:fruit_hub/Features/on_boarding/presentation/widgets/visibilty_skip_button.dart';
 
-class OnBoardingViewBody extends StatelessWidget {
+class OnBoardingViewBody extends StatefulWidget {
   const OnBoardingViewBody({super.key});
 
   @override
+  State<OnBoardingViewBody> createState() => _OnBoardingViewBodyState();
+}
+
+class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
+  int currentPage = 0;
+  late PageController pageController;
+  @override
+  void initState() {
+    super.initState();
+    pageController = PageController(initialPage: 0);
+  }
+
+  @override
   Widget build(BuildContext context) {
+    pageController.addListener(
+      () {
+        currentPage = pageController.page!.round();
+        setState(() {});
+      },
+    );
     return Column(
       children: <Widget>[
-        const Expanded(
-          child: OnBoardingPageViewBuilder(),
+        Expanded(
+          child: OnBoardingPageViewBuilder(pageController: pageController),
         ),
         DotsIndicator(
           dotsCount: onBoardingPageViewList.length,
-          position: 0,
+          position: currentPage.toDouble(),
           decorator: const DotsDecorator(
             color: AppColors.lightPrimaryColor,
             activeColor: AppColors.primaryColor,
           ),
         ),
+        Padding(
+          padding: const EdgeInsets.only(
+            top: 29,
+            left: 16,
+            right: 16,
+            bottom: 43,
+          ),
+          child: VisibiltySkipButton(
+            currentPage: currentPage,
+          ),
+        ),
       ],
     );
+  }
+
+  @override
+  void dispose() {
+    pageController.dispose();
+    super.dispose();
   }
 }

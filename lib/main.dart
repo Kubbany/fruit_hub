@@ -9,6 +9,7 @@ import 'package:fruit_hub/generated/l10n.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Prefs.init();
+
   runApp(const FruitHub());
 }
 
