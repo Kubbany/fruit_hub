@@ -19,16 +19,16 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
   void initState() {
     super.initState();
     pageController = PageController(initialPage: 0);
-  }
-
-  @override
-  Widget build(BuildContext context) {
     pageController.addListener(
       () {
         currentPage = pageController.page!.round();
         setState(() {});
       },
     );
+  }
+
+  @override
+  Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
         Expanded(
