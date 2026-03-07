@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:fruit_hub/Core/services/prefs.dart';
 import 'package:fruit_hub/Features/auth/presentation/views/auth_view.dart';
 import 'package:fruit_hub/Features/on_boarding/presentation/views/on_boarding_view.dart';
-import 'package:fruit_hub/constants/assets.dart';
-import 'package:fruit_hub/constants/strings.dart';
+import 'package:fruit_hub/Core/utils/constants/assets.dart';
+import 'package:fruit_hub/Core/utils/constants/strings.dart';
 import 'package:svg_flutter/svg.dart';
 
 class SplashViewBody extends StatefulWidget {
