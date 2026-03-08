@@ -5,7 +5,7 @@ import 'package:fruit_hub/Features/auth/presentation/views/login_view.dart';
 
 void skipToLogin(BuildContext context) {
   {
-    Prefs.setBool(AppStrings.skipToLogin, true);
+    Prefs.setBool(AppStrings.kSkipToLoginBool, true);
     Navigator.pushReplacementNamed(context, LoginView.routeName);
   }
 }

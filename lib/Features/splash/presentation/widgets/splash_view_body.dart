@@ -43,7 +43,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
     await Future.delayed(const Duration(seconds: 2));
     {
       if (mounted) {
-        bool skipToLogin = Prefs.getBool(AppStrings.skipToLogin);
+        bool skipToLogin = Prefs.getBool(AppStrings.kSkipToLoginBool);
         if (skipToLogin) {
           Navigator.pushReplacementNamed(context, LoginView.routeName);
           return;

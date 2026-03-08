@@ -14,11 +14,11 @@ class OnBoardingPageViewBuilder extends StatelessWidget {
       controller: pageController,
       itemBuilder: (context, index) {
         return PageViewItem(
-          item: onBoardingPageViewList[index],
+          item: OnBoardingPageViewEntity.onBoardingPageViewList[index],
           index: index,
         );
       },
-      itemCount: onBoardingPageViewList.length,
+      itemCount: OnBoardingPageViewEntity.onBoardingPageViewList.length,
     );
   }
 }

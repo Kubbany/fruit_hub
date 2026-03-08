@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_hub/Core/helpers/functions/skip_to_login.dart';
 import 'package:fruit_hub/Core/utils/constants/colors.dart';
-import 'package:fruit_hub/Core/utils/constants/strings.dart';
+import 'package:fruit_hub/Core/utils/extensions/localization_extension.dart';
 import 'package:fruit_hub/Core/utils/widgets/custom_button.dart';
 
 class VisibiltySkipButton extends StatelessWidget {
@@ -19,7 +19,7 @@ class VisibiltySkipButton extends StatelessWidget {
       maintainState: true,
       child: CustomButton(
         onPressed: () => skipToLogin(context),
-        title: AppStrings.startNow,
+        title: context.tr.startNow,
         backgroundColor: AppColors.primaryColor,
       ),
     );

@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:fruit_hub/Core/utils/app_text_styles.dart';
+import 'package:fruit_hub/Core/utils/constants/assets.dart';
 import 'package:fruit_hub/Core/utils/constants/colors.dart';
+import 'package:fruit_hub/Core/utils/extensions/localization_extension.dart';
 import 'package:fruit_hub/Core/utils/widgets/custom_dots_indicator.dart';
 import 'package:fruit_hub/Features/on_boarding/domain/entities/on_boarding_page_view_entity.dart';
 import 'package:fruit_hub/Features/on_boarding/presentation/widgets/on_boarding_page_view_builder.dart';
 import 'package:fruit_hub/Features/on_boarding/presentation/widgets/visibilty_skip_button.dart';
+import 'package:fruit_hub/Features/on_boarding/presentation/widgets/welcome_title_widget.dart';
 
 class OnBoardingViewBody extends StatefulWidget {
   const OnBoardingViewBody({super.key});
@@ -29,6 +33,23 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
 
   @override
   Widget build(BuildContext context) {
+    OnBoardingPageViewEntity.onBoardingPageViewList = [
+      OnBoardingPageViewEntity(
+        backgroundImage: Assets.imagesPageViewItem1BackgroundImage,
+        image: Assets.imagesPageViewItem1Image,
+        title: const WelcomeTitleWidget(),
+        description: context.tr.onBoardingP1Description,
+      ),
+      OnBoardingPageViewEntity(
+        backgroundImage: Assets.imagesPageViewItem2BackgroundImage,
+        image: Assets.imagesPageViewItem2Image,
+        title: Text(
+          context.tr.searchAndShop,
+          style: TextStyles.bold23,
+        ),
+        description: context.tr.onBoardingP2Description,
+      ),
+    ];
     return Column(
       children: <Widget>[
         Expanded(
@@ -37,7 +58,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
           ),
         ),
         CustomDotsIndicator(
-          dotsCount: onBoardingPageViewList.length,
+          dotsCount: OnBoardingPageViewEntity.onBoardingPageViewList.length,
           activeColor: AppColors.primaryColor,
           color: AppColors.primaryColor.withAlpha(127),
           margin: 5,

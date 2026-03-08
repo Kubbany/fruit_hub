@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fruit_hub/Core/utils/app_text_styles.dart';
 import 'package:fruit_hub/Core/utils/constants/colors.dart';
 import 'package:fruit_hub/Core/utils/constants/strings.dart';
+import 'package:fruit_hub/Core/utils/extensions/localization_extension.dart';
 
 class WelcomeTitleWidget extends StatelessWidget {
   const WelcomeTitleWidget({super.key});
@@ -10,7 +11,7 @@ class WelcomeTitleWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return RichText(
       text: TextSpan(
-        text: AppStrings.onBoardingPage1Title1,
+        text: context.tr.welcomeAt,
         style: TextStyles.bold23.copyWith(
           color: AppColors.headerColor,
         ),
