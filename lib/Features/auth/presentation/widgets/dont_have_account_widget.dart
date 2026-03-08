@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:fruit_hub/Core/utils/app_text_styles.dart';
 import 'package:fruit_hub/Core/utils/constants/colors.dart';
 import 'package:fruit_hub/Core/utils/extensions/localization_extension.dart';
+import 'package:fruit_hub/Features/auth/presentation/views/register_view.dart';
 
 class DontHaveAccountWidget extends StatelessWidget {
   const DontHaveAccountWidget({super.key});
@@ -25,7 +26,10 @@ class DontHaveAccountWidget extends StatelessWidget {
             style: TextStyles.semiBold16.copyWith(
               color: AppColors.primaryColor,
             ),
-            recognizer: TapGestureRecognizer()..onTap = () {},
+            recognizer: TapGestureRecognizer()
+              ..onTap = () {
+                Navigator.pushNamed(context, RegisterView.routeName);
+              },
           ),
         ],
       ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fruit_hub/Core/utils/extensions/localization_extension.dart';
 
 import 'package:fruit_hub/Features/auth/presentation/widgets/credentials_login_section.dart';
 import 'package:fruit_hub/Features/auth/presentation/widgets/custom_app_bar.dart';
@@ -11,20 +12,22 @@ class LoginViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.all(
+    return Padding(
+      padding: const EdgeInsets.all(
         16,
       ),
       child: Column(
         children: <Widget>[
-          CustomAppBar(),
-          SizedBox(height: 24),
-          CredentialsLoginSection(),
-          SizedBox(
+          CustomAppBar(
+            title: context.tr.login,
+          ),
+          const SizedBox(height: 24),
+          const CredentialsLoginSection(),
+          const SizedBox(
             height: 37,
           ),
-          OrDivider(),
-          SocialLoginSection(),
+          const OrDivider(),
+          const SocialLoginSection(),
         ],
       ),
     );

@@ -15,7 +15,9 @@ class CustomBackButton extends StatelessWidget {
         radius: 22,
         backgroundColor: Colors.white,
         child: IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pop(context);
+          },
           icon: const Icon(
             Icons.arrow_back_ios_new_rounded,
             color: AppColors.headerColor,
