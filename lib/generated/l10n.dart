@@ -228,6 +228,136 @@ class S {
       args: [],
     );
   }
+
+  /// `Forgot Password`
+  String get reset_password {
+    return Intl.message(
+      'Forgot Password',
+      name: 'reset_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Don't worry, just enter your email and we'll send you a verification code.`
+  String get type_email_code {
+    return Intl.message(
+      'Don\'t worry, just enter your email and we\'ll send you a verification code.',
+      name: 'type_email_code',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Send Verification Code`
+  String get send_code {
+    return Intl.message(
+      'Send Verification Code',
+      name: 'send_code',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Verify Code`
+  String get check_code {
+    return Intl.message('Verify Code', name: 'check_code', desc: '', args: []);
+  }
+
+  /// `Enter the code we sent to the following email address`
+  String get type_recieved_code {
+    return Intl.message(
+      'Enter the code we sent to the following email address',
+      name: 'type_recieved_code',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Verify Code`
+  String get check_code_button {
+    return Intl.message(
+      'Verify Code',
+      name: 'check_code_button',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Resend Code`
+  String get resend_code {
+    return Intl.message('Resend Code', name: 'resend_code', desc: '', args: []);
+  }
+
+  /// `New Password`
+  String get new_password {
+    return Intl.message(
+      'New Password',
+      name: 'new_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter Your New Password`
+  String get enter_new_password {
+    return Intl.message(
+      'Enter Your New Password',
+      name: 'enter_new_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `ReEnter Your New Password`
+  String get reenter_new_password {
+    return Intl.message(
+      'ReEnter Your New Password',
+      name: 'reenter_new_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Create a new password to login`
+  String get create_new_password {
+    return Intl.message(
+      'Create a new password to login',
+      name: 'create_new_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Create New Password`
+  String get create_new_password_button {
+    return Intl.message(
+      'Create New Password',
+      name: 'create_new_password_button',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password changed successfully`
+  String get new_password_success {
+    return Intl.message(
+      'Password changed successfully',
+      name: 'new_password_success',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter the password again`
+  String get new_password_failure {
+    return Intl.message(
+      'Please enter the password again',
+      name: 'new_password_failure',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

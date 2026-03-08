@@ -19,7 +19,7 @@ class LoginRegisterNavigationAction extends StatelessWidget {
       TextSpan(
         children: [
           TextSpan(
-            text: '$title ',
+            text: '$title  ',
             style: TextStyles.semiBold16.copyWith(
               color: const Color(
                 0xFF616A6B,

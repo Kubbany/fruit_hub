@@ -20,5 +20,19 @@
     "by_creating_account": "By creating an account, you agree to",
     "agree_terms": "our Terms and Conditions",
     "create_new_account": "Create New Account",
-    "have_account": "Already have an account?"
+    "have_account": "Already have an account?",
+    "reset_password": "Forgot Password",
+    "type_email_code": "Don't worry, just enter your email and we'll send you a verification code.",
+    "send_code": "Send Verification Code",
+    "check_code": "Verify Code",
+    "type_recieved_code": "Enter the code we sent to the following email address",
+    "check_code_button": "Verify Code",
+    "resend_code": "Resend Code",
+    "new_password": "New Password",
+    "enter_new_password": "Enter Your New Password",
+    "reenter_new_password": "ReEnter Your New Password",
+    "create_new_password": "Create a new password to login",
+    "create_new_password_button": "Create New Password",
+    "new_password_success": "Password changed successfully",
+    "new_password_failure": "Please enter the password again"
 }

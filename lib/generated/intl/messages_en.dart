@@ -28,14 +28,25 @@ class MessageLookup extends MessageLookupByLibrary {
     "by_creating_account": MessageLookupByLibrary.simpleMessage(
       "By creating an account, you agree to",
     ),
+    "check_code": MessageLookupByLibrary.simpleMessage("Verify Code"),
+    "check_code_button": MessageLookupByLibrary.simpleMessage("Verify Code"),
     "create_account": MessageLookupByLibrary.simpleMessage("Create an account"),
     "create_new_account": MessageLookupByLibrary.simpleMessage(
       "Create New Account",
+    ),
+    "create_new_password": MessageLookupByLibrary.simpleMessage(
+      "Create a new password to login",
+    ),
+    "create_new_password_button": MessageLookupByLibrary.simpleMessage(
+      "Create New Password",
     ),
     "dont_have_an_account": MessageLookupByLibrary.simpleMessage(
       "Don\'t have an account?",
     ),
     "email": MessageLookupByLibrary.simpleMessage("Email"),
+    "enter_new_password": MessageLookupByLibrary.simpleMessage(
+      "Enter Your New Password",
+    ),
     "forgot_password": MessageLookupByLibrary.simpleMessage("Forgot password?"),
     "full_name": MessageLookupByLibrary.simpleMessage("Full Name"),
     "have_account": MessageLookupByLibrary.simpleMessage(
@@ -43,6 +54,13 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "login": MessageLookupByLibrary.simpleMessage("Login"),
     "new_account": MessageLookupByLibrary.simpleMessage("New Account"),
+    "new_password": MessageLookupByLibrary.simpleMessage("New Password"),
+    "new_password_failure": MessageLookupByLibrary.simpleMessage(
+      "Please enter the password again",
+    ),
+    "new_password_success": MessageLookupByLibrary.simpleMessage(
+      "Password changed successfully",
+    ),
     "on_boarding_p1_description": MessageLookupByLibrary.simpleMessage(
       "Discover a unique shopping experience with FruitHUB. Explore our wide collection of fresh premium fruits and get the best offers and high quality.",
     ),
@@ -51,7 +69,13 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "or": MessageLookupByLibrary.simpleMessage("Or"),
     "password": MessageLookupByLibrary.simpleMessage("Password"),
+    "reenter_new_password": MessageLookupByLibrary.simpleMessage(
+      "ReEnter Your New Password",
+    ),
+    "resend_code": MessageLookupByLibrary.simpleMessage("Resend Code"),
+    "reset_password": MessageLookupByLibrary.simpleMessage("Forgot Password"),
     "search_and_shop": MessageLookupByLibrary.simpleMessage("Search and Shop"),
+    "send_code": MessageLookupByLibrary.simpleMessage("Send Verification Code"),
     "sign_in_with_apple": MessageLookupByLibrary.simpleMessage(
       "Sign in with Apple",
     ),
@@ -63,6 +87,12 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "skip": MessageLookupByLibrary.simpleMessage("Skip"),
     "start_now": MessageLookupByLibrary.simpleMessage("Start Now"),
+    "type_email_code": MessageLookupByLibrary.simpleMessage(
+      "Don\'t worry, just enter your email and we\'ll send you a verification code.",
+    ),
+    "type_recieved_code": MessageLookupByLibrary.simpleMessage(
+      "Enter the code we sent to the following email address",
+    ),
     "welcome_at": MessageLookupByLibrary.simpleMessage("Welcome to "),
   };
 }

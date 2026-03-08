@@ -20,5 +20,19 @@
     "by_creating_account": "من خلال إنشاء حساب، فإنك توافق على",
     "agree_terms": "الشروط والأحكام الخاصة بنا",
     "create_new_account": "إنشاء حساب جديد",
-    "have_account": "تمتلك حساب بالفعل؟"
+    "have_account": "تمتلك حساب بالفعل؟",
+    "reset_password": "نسيان كلمة المرور",
+    "type_email_code": "لا تقلق, ما عليك سوى كتابة بريدك الإلكتروني وسنرسل رمز التحقق.",
+    "send_code": "ارسل رمز التحقق",
+    "check_code": "التحقق من الرمز",
+    "type_recieved_code": "أدخل الرمز الذي أرسلناه إلى عنوان بريدك الإكتروني التالي",
+    "check_code_button": "تحقق من الرمز",
+    "resend_code": "إعادة إرسال الرمز",
+    "new_password": "كلمة مرور جديدة",
+    "enter_new_password": "أدخل كلمة المرور الجديدة",
+    "reenter_new_password": "أعد إدخال كلمة المرور الجديدة",
+    "create_new_password": "قم بإنشاء كلمة مرور جديدة لتسجيل الدخول",
+    "create_new_password_button": "إنشاء كلمة مرور جديدة",
+    "new_password_success": "تم تغيير كلمة المرور بنجاح",
+    "new_password_failure": "يرجى إدخال كلمة المرور من جديد"
 }

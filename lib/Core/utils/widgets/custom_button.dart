@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_hub/Core/utils/app_text_styles.dart';
+import 'package:fruit_hub/Core/utils/constants/colors.dart';
 
 class CustomButton extends StatelessWidget {
   const CustomButton({
     super.key,
     required this.onPressed,
     required this.title,
-    required this.backgroundColor,
+    this.backgroundColor,
   });
   final VoidCallback onPressed;
   final String title;
-  final Color backgroundColor;
+  final Color? backgroundColor;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -19,7 +20,7 @@ class CustomButton extends StatelessWidget {
       child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
-          backgroundColor: backgroundColor,
+          backgroundColor: backgroundColor ?? AppColors.primaryColor,
           shape: const RoundedRectangleBorder(
             borderRadius: BorderRadiusGeometry.all(
               Radius.circular(16),
