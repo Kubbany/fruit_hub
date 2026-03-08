@@ -5,7 +5,7 @@ import 'package:fruit_hub/Core/utils/widgets/custom_button.dart';
 import 'package:fruit_hub/Core/utils/widgets/custom_text_form_field.dart';
 import 'package:fruit_hub/Core/utils/widgets/custom_text_password_field.dart';
 import 'package:fruit_hub/Features/auth/presentation/views/register_view.dart';
-import 'package:fruit_hub/Features/auth/presentation/widgets/dont_have_account_widget.dart';
+import 'package:fruit_hub/Features/auth/presentation/widgets/login_register_navigation_action.dart';
 import 'package:fruit_hub/Features/auth/presentation/widgets/forgot_password_text_button.dart';
 
 class CredentialsLoginSection extends StatelessWidget {
