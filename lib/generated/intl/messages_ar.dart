@@ -22,15 +22,47 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-    "onBoardingP1Description": MessageLookupByLibrary.simpleMessage(
+    "agree_terms": MessageLookupByLibrary.simpleMessage(
+      "الشروط والأحكام الخاصة بنا",
+    ),
+    "by_creating_account": MessageLookupByLibrary.simpleMessage(
+      "من خلال إنشاء حساب، فإنك توافق على",
+    ),
+    "create_account": MessageLookupByLibrary.simpleMessage("قم بإنشاء حساب"),
+    "create_new_account": MessageLookupByLibrary.simpleMessage(
+      "إنشاء حساب جديد",
+    ),
+    "dont_have_an_account": MessageLookupByLibrary.simpleMessage(
+      "لا تمتلك حساب؟",
+    ),
+    "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
+    "forgot_password": MessageLookupByLibrary.simpleMessage(
+      "نسيت كلمة المرور؟",
+    ),
+    "full_name": MessageLookupByLibrary.simpleMessage("الاسم كامل"),
+    "have_account": MessageLookupByLibrary.simpleMessage("تمتلك حساب بالفعل؟"),
+    "login": MessageLookupByLibrary.simpleMessage("تسجيل دخول"),
+    "new_account": MessageLookupByLibrary.simpleMessage("حساب جديد"),
+    "on_boarding_p1_description": MessageLookupByLibrary.simpleMessage(
       "اكتشف تجربة تسوق فريدة مع FruitHUB. استكشف مجموعتنا الواسعة من الفواكه الطازجة الممتازة واحصل على أفضل العروض والجودة العالية.",
     ),
-    "onBoardingP2Description": MessageLookupByLibrary.simpleMessage(
+    "on_boarding_p2_description": MessageLookupByLibrary.simpleMessage(
       "نقدم لك أفضل الفواكه المختارة بعناية. اطلع على التفاصيل والصور والتقييمات لتتأكد من اختيار الفاكهة المثالية",
     ),
-    "searchAndShop": MessageLookupByLibrary.simpleMessage("ابحث وتسوق"),
+    "or": MessageLookupByLibrary.simpleMessage("أو"),
+    "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+    "search_and_shop": MessageLookupByLibrary.simpleMessage("ابحث وتسوق"),
+    "sign_in_with_apple": MessageLookupByLibrary.simpleMessage(
+      "تسجيل بواسطة أبل",
+    ),
+    "sign_in_with_facebook": MessageLookupByLibrary.simpleMessage(
+      "تسجيل بواسطة فيسبوك",
+    ),
+    "sign_in_with_google": MessageLookupByLibrary.simpleMessage(
+      "تسجيل بواسطة جوجل",
+    ),
     "skip": MessageLookupByLibrary.simpleMessage("تخط"),
-    "startNow": MessageLookupByLibrary.simpleMessage("ابدأ الآن"),
-    "welcomeAt": MessageLookupByLibrary.simpleMessage("مرحبًا بك في "),
+    "start_now": MessageLookupByLibrary.simpleMessage("ابدأ الآن"),
+    "welcome_at": MessageLookupByLibrary.simpleMessage("مرحبًا بك في "),
   };
 }

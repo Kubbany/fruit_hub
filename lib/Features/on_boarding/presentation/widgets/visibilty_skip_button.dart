@@ -19,7 +19,7 @@ class VisibiltySkipButton extends StatelessWidget {
       maintainState: true,
       child: CustomButton(
         onPressed: () => skipToLogin(context),
-        title: context.tr.startNow,
+        title: context.tr.start_now,
         backgroundColor: AppColors.primaryColor,
       ),
     );

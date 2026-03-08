@@ -38,16 +38,16 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
         backgroundImage: Assets.imagesPageViewItem1BackgroundImage,
         image: Assets.imagesPageViewItem1Image,
         title: const WelcomeTitleWidget(),
-        description: context.tr.onBoardingP1Description,
+        description: context.tr.on_boarding_p1_description,
       ),
       OnBoardingPageViewEntity(
         backgroundImage: Assets.imagesPageViewItem2BackgroundImage,
         image: Assets.imagesPageViewItem2Image,
         title: Text(
-          context.tr.searchAndShop,
+          context.tr.search_and_shop,
           style: TextStyles.bold23,
         ),
-        description: context.tr.onBoardingP2Description,
+        description: context.tr.on_boarding_p2_description,
       ),
     ];
     return Column(

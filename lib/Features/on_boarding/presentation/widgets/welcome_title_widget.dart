@@ -11,7 +11,7 @@ class WelcomeTitleWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return RichText(
       text: TextSpan(
-        text: context.tr.welcomeAt,
+        text: context.tr.welcome_at,
         style: TextStyles.bold23.copyWith(
           color: AppColors.headerColor,
         ),
