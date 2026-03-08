@@ -2,19 +2,24 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:fruit_hub/Core/utils/app_text_styles.dart';
 import 'package:fruit_hub/Core/utils/constants/colors.dart';
-import 'package:fruit_hub/Core/utils/extensions/localization_extension.dart';
-import 'package:fruit_hub/Features/auth/presentation/views/register_view.dart';
 
-class DontHaveAccountWidget extends StatelessWidget {
-  const DontHaveAccountWidget({super.key});
-
+class LoginRegisterNavigationAction extends StatelessWidget {
+  const LoginRegisterNavigationAction({
+    super.key,
+    required this.title,
+    required this.actionTitle,
+    required this.onPressed,
+  });
+  final String title;
+  final String actionTitle;
+  final VoidCallback onPressed;
   @override
   Widget build(BuildContext context) {
     return Text.rich(
       TextSpan(
         children: [
           TextSpan(
-            text: '${context.tr.dont_have_an_account} ',
+            text: '$title ',
             style: TextStyles.semiBold16.copyWith(
               color: const Color(
                 0xFF616A6B,
@@ -22,14 +27,11 @@ class DontHaveAccountWidget extends StatelessWidget {
             ),
           ),
           TextSpan(
-            text: context.tr.create_account,
+            text: actionTitle,
             style: TextStyles.semiBold16.copyWith(
               color: AppColors.primaryColor,
             ),
-            recognizer: TapGestureRecognizer()
-              ..onTap = () {
-                Navigator.pushNamed(context, RegisterView.routeName);
-              },
+            recognizer: TapGestureRecognizer()..onTap = onPressed,
           ),
         ],
       ),

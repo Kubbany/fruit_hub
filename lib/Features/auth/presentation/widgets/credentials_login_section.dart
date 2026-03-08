@@ -4,6 +4,7 @@ import 'package:fruit_hub/Core/utils/extensions/localization_extension.dart';
 import 'package:fruit_hub/Core/utils/widgets/custom_button.dart';
 import 'package:fruit_hub/Core/utils/widgets/custom_text_form_field.dart';
 import 'package:fruit_hub/Core/utils/widgets/custom_text_password_field.dart';
+import 'package:fruit_hub/Features/auth/presentation/views/register_view.dart';
 import 'package:fruit_hub/Features/auth/presentation/widgets/dont_have_account_widget.dart';
 import 'package:fruit_hub/Features/auth/presentation/widgets/forgot_password_text_button.dart';
 
@@ -42,7 +43,11 @@ class CredentialsLoginSection extends StatelessWidget {
         const SizedBox(
           height: 33,
         ),
-        const DontHaveAccountWidget(),
+        LoginRegisterNavigationAction(
+          title: context.tr.dont_have_an_account,
+          actionTitle: context.tr.create_account,
+          onPressed: () => Navigator.pushNamed(context, RegisterView.routeName),
+        ),
       ],
     );
   }

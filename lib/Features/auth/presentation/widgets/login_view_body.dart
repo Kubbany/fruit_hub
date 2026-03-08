@@ -12,24 +12,26 @@ class LoginViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(
-        16,
-      ),
-      child: Column(
-        children: <Widget>[
-          CustomAppBar(
-            title: context.tr.login,
+    return CustomScrollView(
+      physics: const BouncingScrollPhysics(),
+      slivers: [
+        SliverToBoxAdapter(
+          child: Column(
+            children: <Widget>[
+              CustomAppBar(
+                title: context.tr.login,
+              ),
+              const SizedBox(height: 24),
+              const CredentialsLoginSection(),
+              const SizedBox(
+                height: 37,
+              ),
+              const OrDivider(),
+              const SocialLoginSection(),
+            ],
           ),
-          const SizedBox(height: 24),
-          const CredentialsLoginSection(),
-          const SizedBox(
-            height: 37,
-          ),
-          const OrDivider(),
-          const SocialLoginSection(),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }
