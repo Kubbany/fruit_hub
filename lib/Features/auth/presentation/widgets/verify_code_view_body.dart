@@ -4,6 +4,7 @@ import 'package:fruit_hub/Core/utils/constants/colors.dart';
 import 'package:fruit_hub/Core/utils/extensions/localization_extension.dart';
 import 'package:fruit_hub/Core/utils/widgets/custom_button.dart';
 import 'package:fruit_hub/Features/auth/presentation/views/new_password_view.dart';
+import 'package:fruit_hub/Features/auth/presentation/widgets/otp_fields.dart';
 import 'package:fruit_hub/Features/auth/presentation/widgets/custom_app_bar.dart';
 
 class VerifyCodeViewBody extends StatelessWidget {
@@ -26,6 +27,7 @@ class VerifyCodeViewBody extends StatelessWidget {
         const SizedBox(
           height: 29,
         ),
+        const OtpFields(),
         const SizedBox(
           height: 29,
         ),
