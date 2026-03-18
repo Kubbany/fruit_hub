@@ -4,10 +4,10 @@ import 'package:fruit_hub/Core/utils/constants/assets.dart';
 import 'package:fruit_hub/Core/utils/constants/colors.dart';
 import 'package:fruit_hub/Core/utils/extensions/localization_extension.dart';
 import 'package:fruit_hub/Core/utils/widgets/custom_dots_indicator.dart';
-import 'package:fruit_hub/Features/on_boarding/domain/entities/on_boarding_page_view_entity.dart';
-import 'package:fruit_hub/Features/on_boarding/presentation/widgets/on_boarding_page_view_builder.dart';
-import 'package:fruit_hub/Features/on_boarding/presentation/widgets/visibilty_skip_button.dart';
-import 'package:fruit_hub/Features/on_boarding/presentation/widgets/welcome_title_widget.dart';
+import 'package:fruit_hub/features/on_boarding/domain/entities/on_boarding_page_view_entity.dart';
+import 'package:fruit_hub/features/on_boarding/presentation/widgets/on_boarding_page_view_builder.dart';
+import 'package:fruit_hub/features/on_boarding/presentation/widgets/visibilty_skip_button.dart';
+import 'package:fruit_hub/features/on_boarding/presentation/widgets/welcome_title_widget.dart';
 
 class OnBoardingViewBody extends StatefulWidget {
   const OnBoardingViewBody({super.key});

@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_hub/Core/utils/app_text_styles.dart';
-import 'package:fruit_hub/Core/utils/constants/colors.dart';
 import 'package:fruit_hub/Core/utils/text_form_field_style.dart';
 
 class CustomTextFormField extends StatelessWidget {
@@ -17,12 +15,7 @@ class CustomTextFormField extends StatelessWidget {
       controller: controller,
       style: TextFormFieldStyle.inputStyle,
       decoration: InputDecoration(
-        hint: Text(
-          hint,
-          style: TextStyles.bold13.copyWith(
-            color: AppColors.inputFieldsColor,
-          ),
-        ),
+        hint: Text(hint, style: TextFormFieldStyle.hintStyle),
         filled: TextFormFieldStyle.filled,
         fillColor: TextFormFieldStyle.fillColor,
 

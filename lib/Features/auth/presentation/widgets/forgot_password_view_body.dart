@@ -3,8 +3,8 @@ import 'package:fruit_hub/Core/utils/app_text_styles.dart';
 import 'package:fruit_hub/Core/utils/extensions/localization_extension.dart';
 import 'package:fruit_hub/Core/utils/widgets/custom_button.dart';
 import 'package:fruit_hub/Core/utils/widgets/custom_text_form_field.dart';
-import 'package:fruit_hub/Features/auth/presentation/views/verify_code_view.dart';
-import 'package:fruit_hub/Features/auth/presentation/widgets/custom_app_bar.dart';
+import 'package:fruit_hub/features/auth/presentation/views/verify_code_view.dart';
+import 'package:fruit_hub/features/auth/presentation/widgets/custom_app_bar.dart';
 
 class ForgotPasswordViewBody extends StatelessWidget {
   const ForgotPasswordViewBody({super.key});

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_hub/Core/services/prefs.dart';
-import 'package:fruit_hub/Features/auth/presentation/views/login_view.dart';
-import 'package:fruit_hub/Features/on_boarding/presentation/views/on_boarding_view.dart';
+import 'package:fruit_hub/features/auth/presentation/views/login_view.dart';
+import 'package:fruit_hub/features/on_boarding/presentation/views/on_boarding_view.dart';
 import 'package:fruit_hub/Core/utils/constants/assets.dart';
 import 'package:fruit_hub/Core/utils/constants/strings.dart';
 import 'package:svg_flutter/svg.dart';

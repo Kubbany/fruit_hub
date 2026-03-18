@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_hub/Core/utils/app_text_styles.dart';
-import 'package:fruit_hub/Features/auth/domain/entities/social_login_button_entity.dart';
+import 'package:fruit_hub/features/auth/domain/entities/social_login_button_entity.dart';
 import 'package:svg_flutter/svg.dart';
 
 class SocialLoginListTile extends StatelessWidget {

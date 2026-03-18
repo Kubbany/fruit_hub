@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_hub/Features/on_boarding/domain/entities/on_boarding_page_view_entity.dart';
-import 'package:fruit_hub/Features/on_boarding/presentation/widgets/page_view_item.dart';
+import 'package:fruit_hub/features/on_boarding/domain/entities/on_boarding_page_view_entity.dart';
+import 'package:fruit_hub/features/on_boarding/presentation/widgets/page_view_item.dart';
 
 class OnBoardingPageViewBuilder extends StatelessWidget {
   const OnBoardingPageViewBuilder({

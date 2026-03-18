@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_hub/Features/on_boarding/domain/entities/on_boarding_page_view_entity.dart';
-import 'package:fruit_hub/Features/on_boarding/presentation/widgets/skip_to_login_button.dart';
-import 'package:fruit_hub/Features/on_boarding/presentation/widgets/title_and_description_section.dart';
+import 'package:fruit_hub/features/on_boarding/domain/entities/on_boarding_page_view_entity.dart';
+import 'package:fruit_hub/features/on_boarding/presentation/widgets/skip_to_login_button.dart';
+import 'package:fruit_hub/features/on_boarding/presentation/widgets/title_and_description_section.dart';
 import 'package:svg_flutter/svg.dart';
 
 class PageViewItem extends StatelessWidget {

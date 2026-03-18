@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fruit_hub/Core/utils/app_text_styles.dart';
 import 'package:fruit_hub/Core/utils/constants/colors.dart';
 import 'package:fruit_hub/Core/utils/extensions/localization_extension.dart';
-import 'package:fruit_hub/Features/auth/presentation/views/forgot_password_view.dart';
+import 'package:fruit_hub/features/auth/presentation/views/forgot_password_view.dart';
 
 class ForgotPasswordTextButton extends StatelessWidget {
   const ForgotPasswordTextButton({super.key});

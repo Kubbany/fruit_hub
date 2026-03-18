@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_hub/Core/utils/app_text_styles.dart';
 import 'package:fruit_hub/Core/utils/constants/colors.dart';
 import 'package:fruit_hub/Core/utils/text_form_field_style.dart';
 
@@ -28,9 +27,7 @@ class _CustomTextPasswordFieldState extends State<CustomTextPasswordField> {
       decoration: InputDecoration(
         hint: Text(
           widget.hint,
-          style: TextStyles.bold13.copyWith(
-            color: AppColors.inputFieldsColor,
-          ),
+          style: TextFormFieldStyle.hintStyle,
         ),
         suffixIcon: IconButton(
           onPressed: () {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:fruit_hub/Core/utils/widgets/custom_check_box.dart';
-import 'package:fruit_hub/Features/auth/presentation/widgets/terms_and_conditions.dart';
+import 'package:fruit_hub/features/auth/presentation/widgets/terms_and_conditions.dart';
 
 class TermsAndConditionsWidget extends StatelessWidget {
   const TermsAndConditionsWidget({super.key});

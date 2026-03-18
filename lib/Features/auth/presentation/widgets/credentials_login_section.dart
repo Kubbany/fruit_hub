@@ -4,9 +4,10 @@ import 'package:fruit_hub/Core/utils/extensions/localization_extension.dart';
 import 'package:fruit_hub/Core/utils/widgets/custom_button.dart';
 import 'package:fruit_hub/Core/utils/widgets/custom_text_form_field.dart';
 import 'package:fruit_hub/Core/utils/widgets/custom_text_password_field.dart';
-import 'package:fruit_hub/Features/auth/presentation/views/register_view.dart';
-import 'package:fruit_hub/Features/auth/presentation/widgets/login_register_navigation_action.dart';
-import 'package:fruit_hub/Features/auth/presentation/widgets/forgot_password_text_button.dart';
+import 'package:fruit_hub/features/auth/presentation/views/register_view.dart';
+import 'package:fruit_hub/features/auth/presentation/widgets/login_register_navigation_action.dart';
+import 'package:fruit_hub/features/auth/presentation/widgets/forgot_password_text_button.dart';
+import 'package:fruit_hub/features/home/presentation/views/home_view.dart';
 
 class CredentialsLoginSection extends StatelessWidget {
   const CredentialsLoginSection({
@@ -36,7 +37,12 @@ class CredentialsLoginSection extends StatelessWidget {
           height: 37,
         ),
         CustomButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushReplacementNamed(
+              context,
+              HomeView.routeName,
+            );
+          },
           title: context.tr.login,
           backgroundColor: AppColors.primaryColor,
         ),
