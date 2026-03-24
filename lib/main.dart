@@ -11,10 +11,10 @@ import 'package:fruit_hub/generated/l10n.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Prefs.init();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  await Prefs.init();
   // var prefs = await SharedPreferences.getInstance();
   // await prefs.clear();
   runApp(const FruitHub());
