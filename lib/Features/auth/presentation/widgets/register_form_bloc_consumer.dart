@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruit_hub/core/utils/constants/colors.dart';
-
 import 'package:fruit_hub/core/utils/show_snack_bar_message.dart';
-
 import 'package:fruit_hub/features/auth/presentation/manager/register_cubit/register_cubit.dart';
-
 import 'package:fruit_hub/features/auth/presentation/widgets/register_form.dart';
 
 class RegisterFormBlocConsumer extends StatelessWidget {
@@ -28,7 +25,7 @@ class RegisterFormBlocConsumer extends StatelessWidget {
           showSnackBarMessage(
             context,
             state.errorMessage,
-            AppColors.lightPrimaryColor,
+            Colors.red,
           );
         }
       },
