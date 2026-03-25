@@ -1,4 +1,5 @@
 import 'package:dartz/dartz.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fruit_hub/core/errors/exceptions.dart';
 import 'package:fruit_hub/core/errors/failure.dart';
 import 'package:fruit_hub/core/services/auth_service.dart';
@@ -17,7 +18,7 @@ class AuthRepoImpl extends AuthRepo {
     String password,
   ) async {
     try {
-      var user = await authService.createUserWithEmailAndPassword(
+      User user = await authService.createUserWithEmailAndPassword(
         email: email,
         password: password,
       );

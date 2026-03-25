@@ -189,6 +189,16 @@ class S {
     return Intl.message('Full Name', name: 'full_name', desc: '', args: []);
   }
 
+  /// `Confirm Password`
+  String get confirm_password {
+    return Intl.message(
+      'Confirm Password',
+      name: 'confirm_password',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `By creating an account, you agree to`
   String get by_creating_account {
     return Intl.message(

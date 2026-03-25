@@ -30,6 +30,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "check_code": MessageLookupByLibrary.simpleMessage("التحقق من الرمز"),
     "check_code_button": MessageLookupByLibrary.simpleMessage("تحقق من الرمز"),
+    "confirm_password": MessageLookupByLibrary.simpleMessage(
+      "تاكيد كلمة المرور",
+    ),
     "create_account": MessageLookupByLibrary.simpleMessage("قم بإنشاء حساب"),
     "create_new_account": MessageLookupByLibrary.simpleMessage(
       "إنشاء حساب جديد",

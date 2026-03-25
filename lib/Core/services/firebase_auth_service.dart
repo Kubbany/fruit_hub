@@ -17,8 +17,8 @@ class FirebaseAuthService extends AuthService {
           );
       return credential.user!;
     } on FirebaseAuthException catch (e) {
-      debugPrint(e.code.toString());
-      throw CustomException(message: e.message.toString());
+      debugPrint(e.toString());
+      throw CustomException(message: e.toString());
       // if (e.code == 'weak-password') {
       //   print('The password provided is too weak.');
       // } else if (e.code == 'email-already-in-use') {

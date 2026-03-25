@@ -7,9 +7,11 @@ class CustomTextPasswordField extends StatefulWidget {
     super.key,
     required this.hint,
     required this.controller,
+    required this.validator,
   });
   final String hint;
   final TextEditingController controller;
+  final String? Function(String?)? validator;
 
   @override
   State<CustomTextPasswordField> createState() =>
@@ -23,6 +25,7 @@ class _CustomTextPasswordFieldState extends State<CustomTextPasswordField> {
     return TextFormField(
       obscureText: !isVisible,
       controller: widget.controller,
+      validator: widget.validator,
       style: TextFormFieldStyle.inputStyle,
       decoration: InputDecoration(
         hint: Text(
@@ -45,7 +48,7 @@ class _CustomTextPasswordFieldState extends State<CustomTextPasswordField> {
 
         border: TextFormFieldStyle.buildBorder(),
         focusedBorder: TextFormFieldStyle.buildBorder(
-          color: Colors.blue,
+          color: AppColors.lightPrimaryColor,
         ),
         enabledBorder: TextFormFieldStyle.buildBorder(),
         errorBorder: TextFormFieldStyle.buildBorder(

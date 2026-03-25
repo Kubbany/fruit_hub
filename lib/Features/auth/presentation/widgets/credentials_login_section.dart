@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_hub/core/utils/constants/colors.dart';
 import 'package:fruit_hub/core/utils/extensions/localization_extension.dart';
+import 'package:fruit_hub/core/utils/validators.dart';
 import 'package:fruit_hub/core/utils/widgets/custom_button.dart';
 import 'package:fruit_hub/core/utils/widgets/custom_text_form_field.dart';
 import 'package:fruit_hub/core/utils/widgets/custom_text_password_field.dart';
@@ -21,6 +22,7 @@ class CredentialsLoginSection extends StatelessWidget {
         CustomTextFormField(
           hint: context.tr.email,
           controller: TextEditingController(),
+          validator: (value) => Validators.validateEmail(value),
         ),
         const SizedBox(
           height: 16,
@@ -28,6 +30,7 @@ class CredentialsLoginSection extends StatelessWidget {
         CustomTextPasswordField(
           hint: context.tr.password,
           controller: TextEditingController(),
+          validator: (value) => Validators.validatePassword(value),
         ),
         const SizedBox(
           height: 16,

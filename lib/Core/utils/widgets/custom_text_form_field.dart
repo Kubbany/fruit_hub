@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fruit_hub/core/utils/constants/colors.dart';
 import 'package:fruit_hub/core/utils/text_form_field_style.dart';
 
 class CustomTextFormField extends StatelessWidget {
@@ -6,13 +7,16 @@ class CustomTextFormField extends StatelessWidget {
     super.key,
     required this.hint,
     required this.controller,
+    required this.validator,
   });
   final String hint;
   final TextEditingController controller;
+  final String? Function(String?)? validator;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
       controller: controller,
+      validator: validator,
       style: TextFormFieldStyle.inputStyle,
       decoration: InputDecoration(
         hint: Text(hint, style: TextFormFieldStyle.hintStyle),
@@ -21,7 +25,7 @@ class CustomTextFormField extends StatelessWidget {
 
         border: TextFormFieldStyle.buildBorder(),
         focusedBorder: TextFormFieldStyle.buildBorder(
-          color: Colors.blue,
+          color: AppColors.lightPrimaryColor,
         ),
         enabledBorder: TextFormFieldStyle.buildBorder(),
         errorBorder: TextFormFieldStyle.buildBorder(

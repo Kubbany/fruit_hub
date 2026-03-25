@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_hub/core/utils/app_text_styles.dart';
 import 'package:fruit_hub/core/utils/extensions/localization_extension.dart';
+import 'package:fruit_hub/core/utils/validators.dart';
 import 'package:fruit_hub/core/utils/widgets/custom_button.dart';
 import 'package:fruit_hub/core/utils/widgets/custom_text_form_field.dart';
 import 'package:fruit_hub/features/auth/presentation/views/verify_code_view.dart';
@@ -31,6 +32,7 @@ class ForgotPasswordViewBody extends StatelessWidget {
         CustomTextFormField(
           hint: context.tr.email,
           controller: TextEditingController(),
+          validator: (value) => Validators.validateEmail(value),
         ),
         const SizedBox(
           height: 30,
