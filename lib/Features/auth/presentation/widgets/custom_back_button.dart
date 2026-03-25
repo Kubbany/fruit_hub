@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_hub/Core/utils/constants/colors.dart';
+import 'package:fruit_hub/core/utils/constants/colors.dart';
 
 class CustomBackButton extends StatelessWidget {
   const CustomBackButton({

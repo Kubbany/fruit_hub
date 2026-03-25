@@ -7,7 +7,7 @@ import 'package:fruit_hub/core/utils/constants/colors.dart';
 import 'package:fruit_hub/features/splash/presentation/views/splash_view.dart';
 import 'package:fruit_hub/firebase_options.dart';
 import 'package:fruit_hub/generated/l10n.dart';
-//import 'package:shared_preferences/shared_preferences.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -15,8 +15,8 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  // var prefs = await SharedPreferences.getInstance();
-  // await prefs.clear();
+  var prefs = await SharedPreferences.getInstance();
+  await prefs.clear();
   runApp(const FruitHub());
 }
 

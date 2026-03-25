@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_hub/Core/utils/app_text_styles.dart';
+import 'package:fruit_hub/core/utils/app_text_styles.dart';
 import 'package:pinput/pinput.dart';
 
 class OtpFields extends StatelessWidget {

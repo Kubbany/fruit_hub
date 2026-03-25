@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_hub/Core/services/prefs.dart';
+import 'package:fruit_hub/core/services/prefs.dart';
 import 'package:fruit_hub/features/auth/presentation/views/login_view.dart';
 import 'package:fruit_hub/features/on_boarding/presentation/views/on_boarding_view.dart';
-import 'package:fruit_hub/Core/utils/constants/assets.dart';
-import 'package:fruit_hub/Core/utils/constants/strings.dart';
+import 'package:fruit_hub/core/utils/constants/assets.dart';
+import 'package:fruit_hub/core/utils/constants/strings.dart';
 import 'package:svg_flutter/svg.dart';
 
 class SplashViewBody extends StatefulWidget {
@@ -17,7 +17,9 @@ class _SplashViewBodyState extends State<SplashViewBody> {
   @override
   void initState() {
     super.initState();
-    _executeNavigation();
+    Future.microtask(() {
+      _executeNavigation();
+    });
   }
 
   @override

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_hub/Core/utils/app_text_styles.dart';
-import 'package:fruit_hub/Core/utils/extensions/localization_extension.dart';
+import 'package:fruit_hub/core/utils/app_text_styles.dart';
+import 'package:fruit_hub/core/utils/extensions/localization_extension.dart';
 import 'package:fruit_hub/features/auth/presentation/widgets/custom_divider.dart';
 
 class OrDivider extends StatelessWidget {

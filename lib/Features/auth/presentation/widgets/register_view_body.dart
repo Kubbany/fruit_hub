@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_hub/Core/utils/constants/colors.dart';
-import 'package:fruit_hub/Core/utils/extensions/localization_extension.dart';
-import 'package:fruit_hub/Core/utils/widgets/custom_button.dart';
+import 'package:fruit_hub/core/utils/constants/colors.dart';
+import 'package:fruit_hub/core/utils/extensions/localization_extension.dart';
+import 'package:fruit_hub/core/utils/widgets/custom_button.dart';
 import 'package:fruit_hub/features/auth/presentation/widgets/custom_app_bar.dart';
 import 'package:fruit_hub/features/auth/presentation/widgets/login_register_navigation_action.dart';
 import 'package:fruit_hub/features/auth/presentation/widgets/register_form.dart';

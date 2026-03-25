@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_hub/Core/utils/app_text_styles.dart';
-import 'package:fruit_hub/Core/utils/constants/assets.dart';
-import 'package:fruit_hub/Core/utils/constants/colors.dart';
-import 'package:fruit_hub/Core/utils/extensions/localization_extension.dart';
-import 'package:fruit_hub/Core/utils/widgets/custom_dots_indicator.dart';
+import 'package:fruit_hub/core/utils/app_text_styles.dart';
+import 'package:fruit_hub/core/utils/constants/assets.dart';
+import 'package:fruit_hub/core/utils/constants/colors.dart';
+import 'package:fruit_hub/core/utils/extensions/localization_extension.dart';
+import 'package:fruit_hub/core/utils/widgets/custom_dots_indicator.dart';
 import 'package:fruit_hub/features/on_boarding/domain/entities/on_boarding_page_view_entity.dart';
 import 'package:fruit_hub/features/on_boarding/presentation/widgets/on_boarding_page_view_builder.dart';
 import 'package:fruit_hub/features/on_boarding/presentation/widgets/visibilty_skip_button.dart';

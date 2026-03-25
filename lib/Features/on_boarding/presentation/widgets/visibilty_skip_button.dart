@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_hub/Core/helpers/functions/skip_to_login.dart';
-import 'package:fruit_hub/Core/utils/constants/colors.dart';
-import 'package:fruit_hub/Core/utils/extensions/localization_extension.dart';
-import 'package:fruit_hub/Core/utils/widgets/custom_button.dart';
+import 'package:fruit_hub/core/helpers/functions/skip_to_login.dart';
+import 'package:fruit_hub/core/utils/constants/colors.dart';
+import 'package:fruit_hub/core/utils/extensions/localization_extension.dart';
+import 'package:fruit_hub/core/utils/widgets/custom_button.dart';
 
 class VisibiltySkipButton extends StatelessWidget {
   const VisibiltySkipButton({

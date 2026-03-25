@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_hub/Core/utils/constants/assets.dart';
-import 'package:fruit_hub/Core/utils/constants/colors.dart';
+import 'package:fruit_hub/core/utils/constants/assets.dart';
+import 'package:fruit_hub/core/utils/constants/colors.dart';
 import 'package:svg_flutter/svg.dart';
 
 class CustomCheckBox extends StatefulWidget {

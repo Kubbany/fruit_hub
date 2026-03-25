@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_hub/Core/utils/constants/assets.dart';
-import 'package:fruit_hub/Core/utils/extensions/localization_extension.dart';
+import 'package:fruit_hub/core/utils/constants/assets.dart';
+import 'package:fruit_hub/core/utils/extensions/localization_extension.dart';
 import 'package:fruit_hub/features/auth/domain/entities/social_login_button_entity.dart';
 import 'package:fruit_hub/features/auth/presentation/widgets/social_login_list_tile.dart';
 

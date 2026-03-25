@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_hub/Core/utils/constants/colors.dart';
-import 'package:fruit_hub/Core/utils/text_form_field_style.dart';
+import 'package:fruit_hub/core/utils/constants/colors.dart';
+import 'package:fruit_hub/core/utils/text_form_field_style.dart';
 
 class CustomTextPasswordField extends StatefulWidget {
   const CustomTextPasswordField({

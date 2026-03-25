@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_hub/Core/utils/constants/colors.dart';
-import 'package:fruit_hub/Core/utils/extensions/localization_extension.dart';
-import 'package:fruit_hub/Core/utils/widgets/custom_button.dart';
-import 'package:fruit_hub/Core/utils/widgets/custom_text_form_field.dart';
-import 'package:fruit_hub/Core/utils/widgets/custom_text_password_field.dart';
+import 'package:fruit_hub/core/utils/constants/colors.dart';
+import 'package:fruit_hub/core/utils/extensions/localization_extension.dart';
+import 'package:fruit_hub/core/utils/widgets/custom_button.dart';
+import 'package:fruit_hub/core/utils/widgets/custom_text_form_field.dart';
+import 'package:fruit_hub/core/utils/widgets/custom_text_password_field.dart';
 import 'package:fruit_hub/features/auth/presentation/views/register_view.dart';
 import 'package:fruit_hub/features/auth/presentation/widgets/login_register_navigation_action.dart';
 import 'package:fruit_hub/features/auth/presentation/widgets/forgot_password_text_button.dart';

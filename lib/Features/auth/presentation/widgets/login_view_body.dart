@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_hub/Core/utils/extensions/localization_extension.dart';
+import 'package:fruit_hub/core/utils/extensions/localization_extension.dart';
 
 import 'package:fruit_hub/features/auth/presentation/widgets/credentials_login_section.dart';
 import 'package:fruit_hub/features/auth/presentation/widgets/custom_app_bar.dart';

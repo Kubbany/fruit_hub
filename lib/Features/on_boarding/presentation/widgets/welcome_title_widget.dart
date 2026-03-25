@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_hub/Core/utils/app_text_styles.dart';
-import 'package:fruit_hub/Core/utils/constants/colors.dart';
-import 'package:fruit_hub/Core/utils/constants/strings.dart';
-import 'package:fruit_hub/Core/utils/extensions/localization_extension.dart';
+import 'package:fruit_hub/core/utils/app_text_styles.dart';
+import 'package:fruit_hub/core/utils/constants/colors.dart';
+import 'package:fruit_hub/core/utils/constants/strings.dart';
+import 'package:fruit_hub/core/utils/extensions/localization_extension.dart';
 
 class WelcomeTitleWidget extends StatelessWidget {
   const WelcomeTitleWidget({super.key});
