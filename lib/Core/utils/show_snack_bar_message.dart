@@ -15,7 +15,7 @@ void showSnackBarMessage(
         ),
       ),
       backgroundColor: backgroundColor,
-      duration: const Duration(seconds: 1),
+      duration: const Duration(seconds: 2),
     ),
   );
 }

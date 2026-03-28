@@ -1,5 +1,4 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/foundation.dart';
 import 'package:fruit_hub/core/errors/exceptions.dart';
 import 'package:fruit_hub/core/services/auth_service.dart';
 
@@ -43,16 +42,11 @@ class FirebaseAuthService extends AuthService {
       );
       return credential.user!;
     } on FirebaseAuthException catch (e) {
-      if (e.code == 'user-not-found') {
-        throw CustomException(message: 'No user found for that email.');
-      } else if (e.code == 'wrong-password') {
-        throw CustomException(
-          message: 'Wrong password provided for that user.',
-        );
+      if (e.code == 'unknown-error') {
+        throw CustomException(message: 'Invalid Credentials');
       }
       throw CustomException(message: e.message.toString());
     } catch (e) {
-      debugPrint(e.toString());
       throw CustomException(message: e.toString());
     }
   }
