@@ -10,6 +10,7 @@ class RegisterCubit extends Cubit<RegisterState> {
   RegisterCubit(this._authRepo) : super(RegisterInitial());
 
   final AuthRepo _authRepo;
+  late bool isTermsAndConditionsAccepted = false;
 
   Future<void> registerUser(String name, String email, String password) async {
     emit(RegisterLoading());

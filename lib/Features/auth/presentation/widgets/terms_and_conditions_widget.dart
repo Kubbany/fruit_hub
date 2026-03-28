@@ -4,17 +4,18 @@ import 'package:fruit_hub/core/utils/widgets/custom_check_box.dart';
 import 'package:fruit_hub/features/auth/presentation/widgets/terms_and_conditions.dart';
 
 class TermsAndConditionsWidget extends StatelessWidget {
-  const TermsAndConditionsWidget({super.key});
-
+  const TermsAndConditionsWidget({super.key, required this.onChanged});
+  final ValueChanged<bool> onChanged;
   @override
   Widget build(BuildContext context) {
-    return const Row(
+    return Row(
+      spacing: 16,
       children: <Widget>[
-        CustomCheckBox(),
-        SizedBox(
-          width: 16,
+        CustomCheckBox(
+          onChanged: onChanged,
         ),
-        Expanded(
+
+        const Expanded(
           child: TermsAndConditions(),
         ),
       ],

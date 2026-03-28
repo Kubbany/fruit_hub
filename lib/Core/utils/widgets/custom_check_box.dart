@@ -4,8 +4,8 @@ import 'package:fruit_hub/core/utils/constants/colors.dart';
 import 'package:svg_flutter/svg.dart';
 
 class CustomCheckBox extends StatefulWidget {
-  const CustomCheckBox({super.key});
-
+  const CustomCheckBox({super.key, required this.onChanged});
+  final ValueChanged<bool> onChanged;
   @override
   State<CustomCheckBox> createState() => _CustomCheckBoxState();
 }
@@ -35,7 +35,10 @@ class _CustomCheckBoxState extends State<CustomCheckBox> {
         ),
       ),
       child: InkWell(
-        onTap: () => setState(() => isTermsAccepted = !isTermsAccepted),
+        onTap: () {
+          setState(() => isTermsAccepted = !isTermsAccepted);
+          widget.onChanged(isTermsAccepted);
+        },
         child: isTermsAccepted
             ? Padding(
                 padding: const EdgeInsets.all(2),

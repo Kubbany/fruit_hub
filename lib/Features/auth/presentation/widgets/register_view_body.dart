@@ -8,12 +8,11 @@ class RegisterViewBody extends StatefulWidget {
   State<RegisterViewBody> createState() => _RegisterViewBodyState();
 }
 
-late GlobalKey<FormState> formKey;
-late TextEditingController nameController;
-late TextEditingController emailController;
-late TextEditingController passwordController;
-
 class _RegisterViewBodyState extends State<RegisterViewBody> {
+  late GlobalKey<FormState> formKey;
+  late TextEditingController nameController;
+  late TextEditingController emailController;
+  late TextEditingController passwordController;
   @override
   void initState() {
     super.initState();
@@ -31,7 +30,12 @@ class _RegisterViewBodyState extends State<RegisterViewBody> {
         SliverToBoxAdapter(
           child: Form(
             key: formKey,
-            child: const RegisterFormBlocConsumer(),
+            child: RegisterFormBlocConsumer(
+              nameController: nameController,
+              emailController: emailController,
+              passwordController: passwordController,
+              formKey: formKey,
+            ),
           ),
         ),
       ],

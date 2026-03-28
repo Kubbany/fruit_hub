@@ -8,8 +8,15 @@ import 'package:fruit_hub/features/auth/presentation/widgets/register_form.dart'
 class RegisterFormBlocConsumer extends StatelessWidget {
   const RegisterFormBlocConsumer({
     super.key,
+    required this.nameController,
+    required this.emailController,
+    required this.passwordController,
+    required this.formKey,
   });
-
+  final GlobalKey<FormState> formKey;
+  final TextEditingController nameController,
+      emailController,
+      passwordController;
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<RegisterCubit, RegisterState>(
@@ -32,6 +39,10 @@ class RegisterFormBlocConsumer extends StatelessWidget {
       builder: (context, state) {
         return RegisterForm(
           isLoading: state is RegisterLoading,
+          formKey: formKey,
+          nameController: nameController,
+          emailController: emailController,
+          passwordController: passwordController,
         );
       },
     );
