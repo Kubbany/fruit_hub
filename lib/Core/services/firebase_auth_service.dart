@@ -5,6 +5,7 @@ import 'package:fruit_hub/core/services/auth_service.dart';
 class FirebaseAuthService extends AuthService {
   @override
   Future<User> createUserWithEmailAndPassword({
+    required String username,
     required String email,
     required String password,
   }) async {
@@ -14,6 +15,7 @@ class FirebaseAuthService extends AuthService {
             email: email,
             password: password,
           );
+      credential.user!.updateDisplayName(username);
       return credential.user!;
     } on FirebaseAuthException catch (e) {
       if (e.code == 'weak-password') {
@@ -48,6 +50,24 @@ class FirebaseAuthService extends AuthService {
       throw CustomException(message: e.message.toString());
     } catch (e) {
       throw CustomException(message: e.toString());
+    }
+  }
+
+  @override
+  Future<User> signInWithGoogle() async {
+    try {
+      final userCredential = await FirebaseAuth.instance.signInWithProvider(
+        GoogleAuthProvider(),
+      );
+
+      return userCredential.user!;
+    } on FirebaseAuthException catch (e) {
+      // Handle Firebase specific errors
+      throw CustomException(message: e.message.toString());
+    } catch (e) {
+      // Handle any other errors
+      print('Google Sign-In Error: $e');
+      throw CustomException(message: 'Google Sign-In Error: ${e.toString()}');
     }
   }
 }

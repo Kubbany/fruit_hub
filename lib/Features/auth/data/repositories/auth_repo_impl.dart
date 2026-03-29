@@ -19,6 +19,7 @@ class AuthRepoImpl extends AuthRepo {
   ) async {
     try {
       User user = await authService.createUserWithEmailAndPassword(
+        username: username,
         email: email,
         password: password,
       );
@@ -40,6 +41,18 @@ class AuthRepoImpl extends AuthRepo {
         email: email,
         password: password,
       );
+      return right(UserModel.fromFirebaseUser(user));
+    } on CustomException catch (e) {
+      return left(ServerFailure(e.message));
+    } catch (e) {
+      return left(ServerFailure(e.toString()));
+    }
+  }
+
+  @override
+  Future<Either<Failure, UserEntity>> signInWithGoogle() async {
+    try {
+      User user = await authService.signInWithGoogle();
       return right(UserModel.fromFirebaseUser(user));
     } on CustomException catch (e) {
       return left(ServerFailure(e.message));
