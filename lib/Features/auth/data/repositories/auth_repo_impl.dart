@@ -32,12 +32,12 @@ class AuthRepoImpl extends AuthRepo {
   }
 
   @override
-  Future<Either<Failure, UserEntity>> signInWithEmailAndPassword(
+  Future<Either<Failure, UserEntity>> loginWithEmailAndPassword(
     String email,
     String password,
   ) async {
     try {
-      User user = await authService.signInWithEmailAndPassword(
+      User user = await authService.loginWithEmailAndPassword(
         email: email,
         password: password,
       );
@@ -50,9 +50,9 @@ class AuthRepoImpl extends AuthRepo {
   }
 
   @override
-  Future<Either<Failure, UserEntity>> signInWithGoogle() async {
+  Future<Either<Failure, UserEntity>> loginWithGoogle() async {
     try {
-      User user = await authService.signInWithGoogle();
+      User user = await authService.loginWithGoogle();
       return right(UserModel.fromFirebaseUser(user));
     } on CustomException catch (e) {
       return left(ServerFailure(e.message));

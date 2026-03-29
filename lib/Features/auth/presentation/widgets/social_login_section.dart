@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruit_hub/core/utils/constants/assets.dart';
 import 'package:fruit_hub/core/utils/extensions/localization_extension.dart';
 import 'package:fruit_hub/features/auth/domain/entities/social_login_button_entity.dart';
+import 'package:fruit_hub/features/auth/presentation/manager/login_cubit/login_cubit.dart';
 import 'package:fruit_hub/features/auth/presentation/widgets/social_login_list_tile.dart';
 
 class SocialLoginSection extends StatelessWidget {
@@ -13,7 +15,9 @@ class SocialLoginSection extends StatelessWidget {
       SocialLoginButtonEntity(
         icon: Assets.imagesGoogleIcon,
         label: context.tr.sign_in_with_google,
-        onPressed: () {},
+        onPressed: () {
+          context.read<LoginCubit>().loginWithGoogle();
+        },
       ),
       SocialLoginButtonEntity(
         icon: Assets.imagesApplIcon,

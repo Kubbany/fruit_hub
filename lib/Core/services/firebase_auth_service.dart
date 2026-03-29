@@ -33,7 +33,7 @@ class FirebaseAuthService extends AuthService {
   }
 
   @override
-  Future<User> signInWithEmailAndPassword({
+  Future<User> loginWithEmailAndPassword({
     required String email,
     required String password,
   }) async {
@@ -54,7 +54,7 @@ class FirebaseAuthService extends AuthService {
   }
 
   @override
-  Future<User> signInWithGoogle() async {
+  Future<User> loginWithGoogle() async {
     try {
       final userCredential = await FirebaseAuth.instance.signInWithProvider(
         GoogleAuthProvider(),

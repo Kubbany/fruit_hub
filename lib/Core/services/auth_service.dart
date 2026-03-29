@@ -7,10 +7,10 @@ abstract class AuthService {
     required String password,
   });
 
-  Future<User> signInWithEmailAndPassword({
+  Future<User> loginWithEmailAndPassword({
     required String email,
     required String password,
   });
 
-  Future<User> signInWithGoogle();
+  Future<User> loginWithGoogle();
 }
