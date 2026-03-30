@@ -6,4 +6,10 @@ class UserEntity {
     required this.username,
     required this.email,
   });
+
+  Map<String, String> toMap() => {
+    'uId': uId,
+    'username': username,
+    'email': email,
+  };
 }

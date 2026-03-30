@@ -4,8 +4,12 @@ import 'package:fruit_hub/core/services/auth_service.dart';
 
 class FirebaseAuthService extends AuthService {
   @override
+  Future<void> deleteUser() async {
+    await FirebaseAuth.instance.currentUser!.delete();
+  }
+
+  @override
   Future<User> createUserWithEmailAndPassword({
-    required String username,
     required String email,
     required String password,
   }) async {
@@ -15,7 +19,6 @@ class FirebaseAuthService extends AuthService {
             email: email,
             password: password,
           );
-      credential.user!.updateDisplayName(username);
       return credential.user!;
     } on FirebaseAuthException catch (e) {
       if (e.code == 'weak-password') {
