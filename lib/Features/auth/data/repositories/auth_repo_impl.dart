@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:dartz/dartz.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fruit_hub/core/errors/exceptions.dart';
@@ -57,7 +59,11 @@ class AuthRepoImpl extends AuthRepo {
         email: email,
         password: password,
       );
-      return right(UserModel.fromFirebaseUser(user));
+      var userEntity = await getUserData(uId: user.uid);
+      log(
+        'name: ${userEntity.username},  email: ${userEntity.email},  uId: ${userEntity.uId}',
+      );
+      return right(userEntity);
     } on CustomException catch (e) {
       return left(ServerFailure(e.message));
     } catch (e) {
@@ -82,6 +88,16 @@ class AuthRepoImpl extends AuthRepo {
     await databaseService.addData(
       path: BackendEndpoints.addUserData,
       data: user.toMap(),
+      docId: user.uId,
     );
+  }
+
+  @override
+  Future<UserEntity> getUserData({required String uId}) async {
+    var userData = await databaseService.getData(
+      path: BackendEndpoints.getUsersData,
+      docId: uId,
+    );
+    return UserModel.fromJson(userData);
   }
 }
