@@ -71,20 +71,20 @@ class AuthRepoImpl extends AuthRepo {
     }
   }
 
-  @override
-  Future<Either<Failure, UserEntity>> loginWithGoogle() async {
-    try {
-      User user = await authService.loginWithGoogle();
-      return right(UserModel.fromFirebaseUser(user));
-    } on CustomException catch (e) {
-      return left(ServerFailure(e.message));
-    } catch (e) {
-      return left(ServerFailure(e.toString()));
-    }
-  }
+  // @override
+  // Future<Either<Failure, UserEntity>> loginWithGoogle() async {
+  //   try {
+  //     User user = await authService.loginWithGoogle();
+  //     return right(UserModel.fromFirebaseUser(user));
+  //   } on CustomException catch (e) {
+  //     return left(ServerFailure(e.message));
+  //   } catch (e) {
+  //     return left(ServerFailure(e.toString()));
+  //   }
+  // }
 
   @override
-  Future<dynamic> addUserData(UserEntity user) async {
+  Future<void> addUserData(UserEntity user) async {
     await databaseService.addData(
       path: BackendEndpoints.addUserData,
       data: user.toMap(),

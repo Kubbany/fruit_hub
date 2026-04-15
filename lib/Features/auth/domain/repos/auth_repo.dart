@@ -12,7 +12,7 @@ abstract class AuthRepo {
     String email,
     String password,
   );
-  Future<Either<Failure, UserEntity>> loginWithGoogle();
+  //Future<Either<Failure, UserEntity>> loginWithGoogle();
 
   Future<void> addUserData(UserEntity user);
 
