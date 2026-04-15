@@ -9,23 +9,30 @@ class CustomButton extends StatelessWidget {
     required this.title,
     this.backgroundColor,
     this.isLoading = false,
+    this.width,
+    this.height,
+    this.titleStyle,
+    this.borderRadius,
   });
   final VoidCallback onPressed;
   final String title;
+  final TextStyle? titleStyle;
   final Color? backgroundColor;
   final bool isLoading;
+  final double? width, height;
+  final double? borderRadius;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: double.infinity,
-      height: 54,
+      width: width ?? double.infinity,
+      height: height ?? 54,
       child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
           backgroundColor: backgroundColor ?? AppColors.primaryColor,
-          shape: const RoundedRectangleBorder(
+          shape: RoundedRectangleBorder(
             borderRadius: BorderRadiusGeometry.all(
-              Radius.circular(16),
+              Radius.circular(borderRadius ?? 16),
             ),
           ),
         ),
@@ -35,9 +42,11 @@ class CustomButton extends StatelessWidget {
               )
             : Text(
                 title,
-                style: TextStyles.bold16.copyWith(
-                  color: Colors.white,
-                ),
+                style:
+                    titleStyle ??
+                    TextStyles.bold16.copyWith(
+                      color: Colors.white,
+                    ),
               ),
       ),
     );
