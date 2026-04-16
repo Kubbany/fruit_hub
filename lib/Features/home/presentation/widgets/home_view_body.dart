@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:fruit_hub/features/home/presentation/widgets/best_selling_grid_view.dart';
 import 'package:fruit_hub/features/home/presentation/widgets/custom_search_field.dart';
 import 'package:fruit_hub/features/home/presentation/widgets/featured_list.dart';
 import 'package:fruit_hub/features/home/presentation/widgets/home_app_bar.dart';
+import 'package:fruit_hub/features/home/presentation/widgets/best_selling_section.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});
@@ -29,9 +31,16 @@ class HomeViewBody extends StatelessWidget {
                 height: MediaQuery.sizeOf(context).height * 0.2,
                 child: const FeaturedList(),
               ),
+              const SizedBox(
+                height: 12,
+              ),
             ],
           ),
         ),
+        const SliverToBoxAdapter(
+          child: BestSellingSection(),
+        ),
+        const BestSellingGridView(),
       ],
     );
   }
