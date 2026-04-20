@@ -28,13 +28,16 @@ class _SplashViewBodyState extends State<SplashViewBody> {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: <Widget>[
-        SizedBox(
+        Align(
+          alignment: Alignment.topLeft,
           child: SvgPicture.asset(
             Assets.imagesPlant,
-            alignment: Alignment.topLeft,
           ),
         ),
-        SvgPicture.asset(Assets.imagesLogo),
+        SvgPicture.asset(
+          Assets.imagesLogo,
+          fit: BoxFit.scaleDown,
+        ),
         SvgPicture.asset(
           Assets.imagesSplashBottom,
           fit: BoxFit.fill,
