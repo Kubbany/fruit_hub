@@ -7,4 +7,5 @@ class AppRoutes {
   static const String newPasswordView = 'newPassword';
   static const String verifyCodeView = 'verifyCode';
   static const String homeView = 'home';
+  static const String mostSellingView = 'mostSelling';
 }

@@ -14,11 +14,13 @@ class LoginView extends StatelessWidget {
     return BlocProvider(
       create: (context) => LoginCubit(getIt<AuthRepo>()),
       child: const Scaffold(
-        body: Padding(
-          padding: EdgeInsets.all(
-            16,
+        body: SafeArea(
+          child: Padding(
+            padding: EdgeInsets.all(
+              16,
+            ),
+            child: LoginViewBody(),
           ),
-          child: LoginViewBody(),
         ),
       ),
     );

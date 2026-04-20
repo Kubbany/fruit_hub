@@ -14,11 +14,13 @@ class RegisterView extends StatelessWidget {
     return BlocProvider(
       create: (context) => RegisterCubit(getIt<AuthRepo>()),
       child: const Scaffold(
-        body: Padding(
-          padding: EdgeInsets.all(
-            16,
+        body: SafeArea(
+          child: Padding(
+            padding: EdgeInsets.all(
+              16,
+            ),
+            child: RegisterViewBody(),
           ),
-          child: RegisterViewBody(),
         ),
       ),
     );

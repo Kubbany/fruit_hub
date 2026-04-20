@@ -8,9 +8,11 @@ class ForgotPasswordView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: Padding(
-        padding: EdgeInsets.all(16),
-        child: ForgotPasswordViewBody(),
+      body: SafeArea(
+        child: Padding(
+          padding: EdgeInsets.all(16),
+          child: ForgotPasswordViewBody(),
+        ),
       ),
     );
   }

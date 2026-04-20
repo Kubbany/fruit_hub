@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_hub/Core/utils/app_text_styles.dart';
 import 'package:fruit_hub/Core/utils/constants/assets.dart';
-import 'package:svg_flutter/svg.dart';
+import 'package:fruit_hub/features/home/presentation/widgets/custom_notifications_button.dart';
 
 class HomeAppBar extends StatelessWidget {
   const HomeAppBar({super.key});
@@ -25,17 +25,7 @@ class HomeAppBar extends StatelessWidget {
             ),
           ),
         ),
-        IconButton(
-          style: IconButton.styleFrom(
-            backgroundColor: const Color(0xFFEEF8ED),
-            shape: const CircleBorder(),
-            fixedSize: const Size.fromRadius(17),
-          ),
-          icon: SvgPicture.asset(
-            Assets.imagesNotification,
-          ),
-          onPressed: () {},
-        ),
+        const CustomNotificationsButton(),
       ],
     );
   }
