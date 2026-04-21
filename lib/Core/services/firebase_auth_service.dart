@@ -73,4 +73,6 @@ class FirebaseAuthService extends AuthService {
       throw CustomException(message: 'Google Sign-In Error: ${e.toString()}');
     }
   }
+
+  bool isLoggedIn() => FirebaseAuth.instance.currentUser != null;
 }
