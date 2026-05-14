@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_hub/Core/utils/app_text_styles.dart';
-import 'package:fruit_hub/core/utils/constants/assets.dart';
+import 'package:fruit_hub/core/entities/product_entity.dart';
 import 'package:fruit_hub/core/utils/constants/colors.dart';
 
 class BestSellingItem extends StatelessWidget {
-  const BestSellingItem({super.key});
-
+  const BestSellingItem({super.key, required this.product});
+  final ProductEntity product;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -33,15 +33,15 @@ class BestSellingItem extends StatelessWidget {
                 const SizedBox(
                   height: 20,
                 ),
-                Image.asset(
-                  Assets.imagesWatermelonTest,
+                Flexible(
+                  child: Image.network(product.imageUrl),
                 ),
                 const SizedBox(
                   height: 24,
                 ),
                 ListTile(
-                  title: const Text(
-                    'بطيخ',
+                  title: Text(
+                    product.name,
                     style: TextStyles.semiBold13,
                   ),
                   subtitle: RichText(
@@ -49,7 +49,7 @@ class BestSellingItem extends StatelessWidget {
                     text: TextSpan(
                       children: [
                         TextSpan(
-                          text: '20جنية',
+                          text: product.price.toString(),
                           style: TextStyles.semiBold16.copyWith(
                             color: const Color(0xffF4B544),
                           ),

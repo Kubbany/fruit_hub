@@ -1,6 +1,5 @@
-import 'dart:io';
-
 import 'package:fruit_hub/core/entities/product_entity.dart';
+import 'package:fruit_hub/core/entities/review_entity.dart';
 import 'package:fruit_hub/core/models/review_model.dart';
 
 class ProductModel {
@@ -8,24 +7,23 @@ class ProductModel {
   final num price;
   final List<ReviewModel> reviews;
   final bool isFeatured;
-  final File image;
-  String? imageUrl;
+  String imageUrl;
   final int expirationMonths;
   final bool isOrganic;
   final int numOfCalories;
   final int unitAmount;
   final int sellingCount;
-  final num avgRating = 0;
+  num avgRating;
   final num ratingCount = 0;
   ProductModel({
     required this.name,
     required this.code,
     required this.description,
     required this.price,
+    required this.avgRating,
     required this.reviews,
     required this.isFeatured,
-    required this.image,
-    this.imageUrl,
+    required this.imageUrl,
     this.isOrganic = false,
     this.sellingCount = 0,
     required this.expirationMonths,
@@ -36,6 +34,7 @@ class ProductModel {
   factory ProductModel.fromJson(Map<String, dynamic> data) {
     return ProductModel(
       name: data['name'] as String,
+      avgRating: 0,
       code: data['code'] as String,
       description: data['description'] as String,
       price: data['price'] as num,
@@ -47,8 +46,7 @@ class ProductModel {
             )
           : [],
       isFeatured: data['isFeatured'] as bool,
-      image: File(data['image'] as String),
-      imageUrl: data['imageUrl'] as String?,
+      imageUrl: data['imageUrl'] as String,
       isOrganic: data['isOrganic'] as bool,
       expirationMonths: data['expirationMonths'] as int,
       numOfCalories: data['numOfCalories'] as int,
@@ -64,8 +62,8 @@ class ProductModel {
     price: price,
     reviews: reviews.map((e) => e.toEntity()).toList(),
     isFeatured: isFeatured,
-    image: image,
     isOrganic: isOrganic,
+    imageUrl: imageUrl,
     expirationMonths: expirationMonths,
     numOfCalories: numOfCalories,
     unitAmount: unitAmount,
@@ -86,5 +84,14 @@ class ProductModel {
       'numOfCalories': numOfCalories,
       'unitAmount': unitAmount,
     };
+  }
+
+  static num getAvgRating(List<ReviewEntity> reviews) {
+    dynamic sum = 0.0;
+    for (var review in reviews) {
+      sum += review.rating;
+    }
+    if (reviews.isEmpty) return 0;
+    return sum / reviews.length;
   }
 }

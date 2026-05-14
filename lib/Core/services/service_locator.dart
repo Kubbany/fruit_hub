@@ -1,3 +1,5 @@
+import 'package:fruit_hub/core/repos/product_repo.dart';
+import 'package:fruit_hub/core/repos/product_repo_impl.dart';
 import 'package:fruit_hub/core/services/auth_service.dart';
 import 'package:fruit_hub/core/services/database_service.dart';
 import 'package:fruit_hub/core/services/firebase_auth_service.dart';
@@ -14,6 +16,11 @@ void setupServiceLocator() {
   getIt.registerSingleton<AuthRepo>(
     AuthRepoImpl(
       authService: getIt<AuthService>(),
+      databaseService: getIt<DatabaseService>(),
+    ),
+  );
+  getIt.registerSingleton<ProductRepo>(
+    ProductRepoImpl(
       databaseService: getIt<DatabaseService>(),
     ),
   );

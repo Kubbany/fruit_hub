@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_hub/core/utils/app_text_styles.dart';
 import 'package:fruit_hub/features/auth/presentation/widgets/custom_app_bar.dart';
-import 'package:fruit_hub/features/home/presentation/widgets/best_selling_grid_view.dart';
+// import 'package:fruit_hub/features/home/presentation/widgets/best_selling_grid_view.dart';
 import 'package:fruit_hub/features/home/presentation/widgets/custom_notifications_button.dart';
 
 class BestSellingViewBody extends StatelessWidget {
@@ -34,7 +34,7 @@ class BestSellingViewBody extends StatelessWidget {
             ],
           ),
         ),
-        BestSellingGridView(),
+        //BestSellingGridView(),
       ],
     );
   }
