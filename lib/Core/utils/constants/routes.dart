@@ -8,5 +8,6 @@ class AppRoutes {
   static const String verifyCodeView = 'verifyCode';
   static const String homeView = 'home';
   static const String mainView = 'main';
+  static const String productsView = 'products';
   static const String mostSellingView = 'mostSelling';
 }

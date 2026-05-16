@@ -4,8 +4,8 @@ import 'package:fruit_hub/core/entities/product_entity.dart';
 import 'package:fruit_hub/core/utils/constants/colors.dart';
 import 'package:fruit_hub/core/utils/widgets/custom_network_image.dart';
 
-class BestSellingItem extends StatelessWidget {
-  const BestSellingItem({super.key, required this.product});
+class ProductItem extends StatelessWidget {
+  const ProductItem({super.key, required this.product});
   final ProductEntity product;
   @override
   Widget build(BuildContext context) {

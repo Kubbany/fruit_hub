@@ -8,6 +8,7 @@ import 'package:fruit_hub/features/home/presentation/views/home_view.dart';
 import 'package:fruit_hub/features/home/presentation/views/main_view.dart';
 import 'package:fruit_hub/features/home/presentation/views/best_selling_view.dart';
 import 'package:fruit_hub/features/on_boarding/presentation/views/on_boarding_view.dart';
+import 'package:fruit_hub/features/products/presentation/view/products_view.dart';
 import 'package:fruit_hub/features/splash/presentation/views/splash_view.dart';
 
 Route<dynamic>? onGenerateRoute(RouteSettings route) {
@@ -47,6 +48,10 @@ Route<dynamic>? onGenerateRoute(RouteSettings route) {
     case HomeView.routeName:
       return MaterialPageRoute(
         builder: (context) => const HomeView(),
+      );
+    case ProductsView.routeName:
+      return MaterialPageRoute(
+        builder: (context) => const ProductsView(),
       );
     case BestSellingView.routeName:
       return MaterialPageRoute(

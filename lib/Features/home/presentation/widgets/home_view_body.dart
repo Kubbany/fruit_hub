@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruit_hub/core/cubits/products_cubit/products_cubit.dart';
-import 'package:fruit_hub/features/home/presentation/widgets/best_selling_grid_view_bloc_builder.dart';
+import 'package:fruit_hub/features/home/presentation/widgets/product_grids_view_bloc_builder.dart';
 import 'package:fruit_hub/features/home/presentation/widgets/custom_search_field.dart';
 import 'package:fruit_hub/features/home/presentation/widgets/featured_list.dart';
 import 'package:fruit_hub/features/home/presentation/widgets/home_app_bar.dart';
@@ -22,7 +22,7 @@ class _HomeViewBodyState extends State<HomeViewBody> {
   }
 
   void fetchBestSellingProducts() async {
-    await context.read<ProductsCubit>().getProducts();
+    await context.read<ProductsCubit>().getBestSellingProducts();
   }
 
   @override
@@ -57,7 +57,7 @@ class _HomeViewBodyState extends State<HomeViewBody> {
         const SliverToBoxAdapter(
           child: BestSellingSection(),
         ),
-        const BestSellingGridViewBlocBuilder(),
+        const ProductsGridViewBlocBuilder(),
       ],
     );
   }
