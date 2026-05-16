@@ -8,9 +8,11 @@ class BestSellingView extends StatelessWidget {
   static const String routeName = AppRoutes.mostSellingView;
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      bottomNavigationBar: CustomButtomNavigationBar(),
-      body: SafeArea(
+    return Scaffold(
+      bottomNavigationBar: CustomButtomNavigationBar(
+        onItemTapped: (value) {},
+      ),
+      body: const SafeArea(
         child: Padding(
           padding: EdgeInsets.symmetric(
             horizontal: 18,

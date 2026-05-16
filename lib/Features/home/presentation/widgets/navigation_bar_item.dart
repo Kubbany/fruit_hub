@@ -30,9 +30,12 @@ class InActiveNavigationBarItem extends StatelessWidget {
   final String image;
   @override
   Widget build(BuildContext context) {
-    return SvgPicture.asset(
-      image,
-      fit: BoxFit.scaleDown,
+    return Container(
+      color: Colors.transparent,
+      child: SvgPicture.asset(
+        image,
+        fit: BoxFit.scaleDown,
+      ),
     );
   }
 }

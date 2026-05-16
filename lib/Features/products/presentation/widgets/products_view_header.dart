@@ -19,8 +19,6 @@ class ProductsViewHeader extends StatelessWidget {
           style: TextStyles.bold16,
         ),
         Container(
-          width: 44,
-          height: 31,
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
           decoration: ShapeDecoration(
             color: Colors.white.withAlpha(26),
@@ -34,7 +32,9 @@ class ProductsViewHeader extends StatelessWidget {
               ),
             ),
           ),
-          child: SvgPicture.asset(Assets.imagesFilter),
+          child: SvgPicture.asset(
+            Assets.imagesFilter2,
+          ),
         ),
       ],
     );
