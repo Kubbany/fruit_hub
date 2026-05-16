@@ -4,7 +4,7 @@ import 'package:fruit_hub/core/utils/constants/colors.dart';
 import 'package:fruit_hub/core/utils/show_snack_bar_message.dart';
 import 'package:fruit_hub/features/auth/presentation/manager/login_cubit/login_cubit.dart';
 import 'package:fruit_hub/features/auth/presentation/widgets/login_form.dart';
-import 'package:fruit_hub/features/home/presentation/views/home_view.dart';
+import 'package:fruit_hub/features/home/presentation/views/main_view.dart';
 
 class LoginFormBlocConsumer extends StatelessWidget {
   const LoginFormBlocConsumer({
@@ -21,7 +21,7 @@ class LoginFormBlocConsumer extends StatelessWidget {
             'تم تسجيل الدخول بنجاح',
             AppColors.lightPrimaryColor,
           );
-          Navigator.pushReplacementNamed(context, HomeView.routeName);
+          Navigator.pushReplacementNamed(context, MainView.routeName);
         } else if (state is LoginFailure) {
           showSnackBarMessage(
             context,

@@ -7,7 +7,7 @@ class ProductModel {
   final num price;
   final List<ReviewModel> reviews;
   final bool isFeatured;
-  String imageUrl;
+  String? imageUrl;
   final int expirationMonths;
   final bool isOrganic;
   final int numOfCalories;
@@ -23,7 +23,7 @@ class ProductModel {
     required this.avgRating,
     required this.reviews,
     required this.isFeatured,
-    required this.imageUrl,
+    this.imageUrl,
     this.isOrganic = false,
     this.sellingCount = 0,
     required this.expirationMonths,
@@ -46,7 +46,7 @@ class ProductModel {
             )
           : [],
       isFeatured: data['isFeatured'] as bool,
-      imageUrl: data['imageUrl'] as String,
+      imageUrl: data['imageUrl'] as String?,
       isOrganic: data['isOrganic'] as bool,
       expirationMonths: data['expirationMonths'] as int,
       numOfCalories: data['numOfCalories'] as int,

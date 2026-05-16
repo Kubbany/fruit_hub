@@ -4,7 +4,6 @@ import 'package:fruit_hub/Core/services/service_locator.dart';
 import 'package:fruit_hub/core/cubits/products_cubit/products_cubit.dart';
 import 'package:fruit_hub/core/repos/product_repo.dart';
 import 'package:fruit_hub/core/utils/constants/routes.dart';
-import 'package:fruit_hub/features/home/presentation/widgets/custom_buttom_navigation_bar.dart';
 import 'package:fruit_hub/features/home/presentation/widgets/home_view_body.dart';
 
 class HomeView extends StatelessWidget {
@@ -17,7 +16,6 @@ class HomeView extends StatelessWidget {
         productRepo: getIt.get<ProductRepo>(),
       ),
       child: const Scaffold(
-        bottomNavigationBar: CustomButtomNavigationBar(),
         backgroundColor: Color(0xFFFEFEFE),
         body: Padding(
           padding: EdgeInsets.symmetric(

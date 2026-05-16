@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fruit_hub/Core/utils/app_text_styles.dart';
 import 'package:fruit_hub/core/entities/product_entity.dart';
 import 'package:fruit_hub/core/utils/constants/colors.dart';
+import 'package:fruit_hub/core/utils/widgets/custom_network_image.dart';
 
 class BestSellingItem extends StatelessWidget {
   const BestSellingItem({super.key, required this.product});
@@ -33,9 +34,11 @@ class BestSellingItem extends StatelessWidget {
                 const SizedBox(
                   height: 20,
                 ),
-                Flexible(
-                  child: Image.network(product.imageUrl),
-                ),
+                product.imageUrl != null
+                    ? Flexible(
+                        child: CustomNetworkImage(imageUrl: product.imageUrl!),
+                      )
+                    : const SizedBox(width: .infinity, height: 100),
                 const SizedBox(
                   height: 24,
                 ),

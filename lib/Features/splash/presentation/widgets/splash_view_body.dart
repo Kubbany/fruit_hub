@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fruit_hub/core/services/firebase_auth_service.dart';
 import 'package:fruit_hub/core/services/prefs.dart';
 import 'package:fruit_hub/features/auth/presentation/views/login_view.dart';
-import 'package:fruit_hub/features/home/presentation/views/home_view.dart';
+import 'package:fruit_hub/features/home/presentation/views/main_view.dart';
 import 'package:fruit_hub/features/on_boarding/presentation/views/on_boarding_view.dart';
 import 'package:fruit_hub/core/utils/constants/assets.dart';
 import 'package:fruit_hub/core/utils/constants/strings.dart';
@@ -56,7 +56,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
         if (skipToLogin) {
           var isLoggedIn = FirebaseAuthService().isLoggedIn();
           if (isLoggedIn) {
-            Navigator.pushReplacementNamed(context, HomeView.routeName);
+            Navigator.pushReplacementNamed(context, MainView.routeName);
           } else {
             Navigator.pushReplacementNamed(context, LoginView.routeName);
           }
