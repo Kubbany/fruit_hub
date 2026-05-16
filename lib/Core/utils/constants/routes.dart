@@ -9,5 +9,6 @@ class AppRoutes {
   static const String homeView = 'home';
   static const String mainView = 'main';
   static const String productsView = 'products';
+  static const String cartView = 'cart';
   static const String mostSellingView = 'mostSelling';
 }
