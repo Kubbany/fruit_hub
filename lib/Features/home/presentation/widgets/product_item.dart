@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fruit_hub/Core/utils/app_text_styles.dart';
 import 'package:fruit_hub/core/entities/product_entity.dart';
 import 'package:fruit_hub/core/utils/constants/colors.dart';
+import 'package:fruit_hub/core/utils/widgets/custom_circular_button.dart';
 import 'package:fruit_hub/core/utils/widgets/custom_network_image.dart';
 
 class ProductItem extends StatelessWidget {
@@ -72,17 +73,12 @@ class ProductItem extends StatelessWidget {
                       ],
                     ),
                   ),
-                  trailing: GestureDetector(
-                    onTap: () {},
-                    child: const CircleAvatar(
-                      radius: 22,
-                      backgroundColor: AppColors.primaryColor,
-                      child: Icon(
-                        Icons.add,
-                        color: Colors.white,
-                        size: 32,
-                      ),
-                    ),
+                  trailing: const CustomCircularButton(
+                    icon: Icons.add,
+                    iconColor: Colors.white,
+                    backgroundColor: AppColors.primaryColor,
+                    buttonRadius: 22,
+                    iconSize: 35,
                   ),
                 ),
               ],

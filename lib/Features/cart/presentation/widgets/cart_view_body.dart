@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fruit_hub/Core/utils/constants/colors.dart';
 import 'package:fruit_hub/core/utils/app_text_styles.dart';
 import 'package:fruit_hub/features/auth/presentation/widgets/custom_app_bar.dart';
+import 'package:fruit_hub/features/cart/presentation/widgets/cart_item.dart';
 
 class CartViewBody extends StatelessWidget {
   const CartViewBody({super.key});
@@ -39,6 +40,10 @@ class CartViewBody extends StatelessWidget {
                   textAlign: .center,
                 ),
               ),
+              const SizedBox(
+                height: 7,
+              ),
+              const CartItem(),
             ],
           ),
         ),
