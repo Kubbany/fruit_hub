@@ -73,7 +73,8 @@ class ProductItem extends StatelessWidget {
                       ],
                     ),
                   ),
-                  trailing: const CustomCircularButton(
+                  trailing: CustomCircularButton(
+                    onTap: () {},
                     icon: Icons.add,
                     iconColor: Colors.white,
                     backgroundColor: AppColors.primaryColor,

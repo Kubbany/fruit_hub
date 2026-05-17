@@ -34,7 +34,9 @@ class CartViewBody extends StatelessWidget {
                 ],
               ),
             ),
-            CartItemsSliverListView(),
+            CartItemsSliverListView(
+              cartItems: [],
+            ),
           ],
         ),
         Positioned(
