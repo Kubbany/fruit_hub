@@ -24,7 +24,7 @@ class _ProductQuantityActionsState extends State<ProductQuantityActions> {
         CustomCircularButton(
           onTap: () {
             setState(() {
-              widget.cartItem.count++;
+              widget.cartItem.increaseCount();
             });
           },
           icon: Icons.add,
@@ -40,7 +40,7 @@ class _ProductQuantityActionsState extends State<ProductQuantityActions> {
         CustomCircularButton(
           onTap: () {
             setState(() {
-              widget.cartItem.count--;
+              widget.cartItem.decreaseCount();
             });
           },
           icon: Icons.remove,

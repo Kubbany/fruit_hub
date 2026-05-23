@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruit_hub/Core/utils/app_text_styles.dart';
 import 'package:fruit_hub/core/entities/product_entity.dart';
 import 'package:fruit_hub/core/utils/constants/colors.dart';
 import 'package:fruit_hub/core/utils/widgets/custom_circular_button.dart';
 import 'package:fruit_hub/core/utils/widgets/custom_network_image.dart';
+import 'package:fruit_hub/features/cart/presentation/managers/cart_cubit/cart_cubit.dart';
 
 class ProductItem extends StatelessWidget {
   const ProductItem({super.key, required this.product});
@@ -74,7 +76,9 @@ class ProductItem extends StatelessWidget {
                     ),
                   ),
                   trailing: CustomCircularButton(
-                    onTap: () {},
+                    onTap: () {
+                      context.read<CartCubit>().addProduct(product);
+                    },
                     icon: Icons.add,
                     iconColor: Colors.white,
                     backgroundColor: AppColors.primaryColor,

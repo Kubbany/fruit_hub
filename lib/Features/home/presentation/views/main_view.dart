@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:fruit_hub/core/utils/constants/routes.dart';
-import 'package:fruit_hub/features/cart/presentation/view/cart_view.dart';
-import 'package:fruit_hub/features/home/presentation/views/home_view.dart';
-import 'package:fruit_hub/features/products/presentation/view/products_view.dart';
+import 'package:fruit_hub/features/cart/presentation/managers/cart_cubit/cart_cubit.dart';
+import 'package:fruit_hub/features/home/presentation/views/main_view_body_bloc_listener.dart';
 import 'package:fruit_hub/features/home/presentation/widgets/custom_buttom_navigation_bar.dart';
 
 class MainView extends StatefulWidget {
@@ -18,20 +18,16 @@ class _MainViewState extends State<MainView> {
   int currentViewIndex = 0;
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      bottomNavigationBar: CustomButtomNavigationBar(
-        onItemTapped: (value) {
-          currentViewIndex = value;
-          setState(() {});
-        },
-      ),
-      body: IndexedStack(
-        index: currentViewIndex,
-        children: [
-          const HomeView(),
-          const ProductsView(),
-          const CartView(),
-        ],
+    return BlocProvider(
+      create: (context) => CartCubit(),
+      child: Scaffold(
+        bottomNavigationBar: CustomButtomNavigationBar(
+          onItemTapped: (value) {
+            currentViewIndex = value;
+            setState(() {});
+          },
+        ),
+        body: MainViewBodyBlocListener(currentViewIndex: currentViewIndex),
       ),
     );
   }
