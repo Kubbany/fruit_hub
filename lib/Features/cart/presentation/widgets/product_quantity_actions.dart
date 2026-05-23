@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruit_hub/Core/utils/constants/colors.dart';
 import 'package:fruit_hub/core/utils/app_text_styles.dart';
 import 'package:fruit_hub/core/utils/widgets/custom_circular_button.dart';
 import 'package:fruit_hub/features/cart/domain/entities/cart_item_entity.dart';
+import 'package:fruit_hub/features/cart/presentation/managers/cart_item_cubit/cart_item_cubit.dart';
 
-class ProductQuantityActions extends StatefulWidget {
+class ProductQuantityActions extends StatelessWidget {
   const ProductQuantityActions({
     super.key,
     required this.cartItem,
@@ -12,20 +14,14 @@ class ProductQuantityActions extends StatefulWidget {
   final CartItemEntity cartItem;
 
   @override
-  State<ProductQuantityActions> createState() => _ProductQuantityActionsState();
-}
-
-class _ProductQuantityActionsState extends State<ProductQuantityActions> {
-  @override
   Widget build(BuildContext context) {
     return Row(
       spacing: 15,
       children: <Widget>[
         CustomCircularButton(
           onTap: () {
-            setState(() {
-              widget.cartItem.increaseCount();
-            });
+            cartItem.increaseCount();
+            context.read<CartItemCubit>().updateCartItem(cartItem);
           },
           icon: Icons.add,
           iconColor: Colors.white,
@@ -34,14 +30,13 @@ class _ProductQuantityActionsState extends State<ProductQuantityActions> {
           iconSize: 18,
         ),
         Text(
-          widget.cartItem.count.toString(),
+          cartItem.count.toString(),
           style: TextStyles.bold16,
         ),
         CustomCircularButton(
           onTap: () {
-            setState(() {
-              widget.cartItem.decreaseCount();
-            });
+            cartItem.decreaseCount();
+            context.read<CartItemCubit>().updateCartItem(cartItem);
           },
           icon: Icons.remove,
           iconColor: const Color(0xFF979899),

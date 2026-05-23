@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:fruit_hub/core/utils/widgets/custom_button.dart';
 import 'package:fruit_hub/features/auth/presentation/widgets/custom_app_bar.dart';
 import 'package:fruit_hub/features/cart/presentation/managers/cart_cubit/cart_cubit.dart';
 import 'package:fruit_hub/features/cart/presentation/widgets/cart_header.dart';
 import 'package:fruit_hub/features/cart/presentation/widgets/cart_items_sliver_list_view.dart';
+import 'package:fruit_hub/features/cart/presentation/widgets/custom_cart_price_button.dart';
 
 class CartViewBody extends StatelessWidget {
   const CartViewBody({super.key});
@@ -13,10 +13,10 @@ class CartViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        const CustomScrollView(
-          physics: BouncingScrollPhysics(),
+        CustomScrollView(
+          physics: const BouncingScrollPhysics(),
           slivers: [
-            SliverToBoxAdapter(
+            const SliverToBoxAdapter(
               child: Column(
                 spacing: 16,
                 children: <Widget>[
@@ -36,18 +36,16 @@ class CartViewBody extends StatelessWidget {
                 ],
               ),
             ),
-            CartItemsSliverListView(),
+            CartItemsSliverListView(
+              cartItems: context.watch<CartCubit>().cart.cartItems,
+            ),
           ],
         ),
         Positioned(
           left: 16,
           right: 16,
           bottom: MediaQuery.sizeOf(context).height * 0.07,
-          child: CustomButton(
-            onPressed: () {},
-            title:
-                'الدفع ${context.watch<CartCubit>().cart.calculateTotalPrice()} جنيه',
-          ),
+          child: const CustomCartPriceButton(),
         ),
       ],
     );

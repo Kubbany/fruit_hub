@@ -1,19 +1,12 @@
 part of 'cart_cubit.dart';
 
 @immutable
-sealed class CartState extends Equatable {
+sealed class CartState {
   const CartState();
-
-  @override
-  List<Object> get props => [];
 }
 
 final class CartInitial extends CartState {}
 
-final class CartItemAdded extends CartState {
-  const CartItemAdded();
-}
+final class CartItemAdded extends CartState {}
 
-final class CartItemRemoved extends CartState {
-  const CartItemRemoved();
-}
+final class CartItemRemoved extends CartState {}
