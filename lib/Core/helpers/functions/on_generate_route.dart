@@ -5,6 +5,7 @@ import 'package:fruit_hub/features/auth/presentation/views/new_password_view.dar
 import 'package:fruit_hub/features/auth/presentation/views/register_view.dart';
 import 'package:fruit_hub/features/auth/presentation/views/verify_code_view.dart';
 import 'package:fruit_hub/features/cart/presentation/view/cart_view.dart';
+import 'package:fruit_hub/features/checkout/presentation/views/checkout_view.dart';
 import 'package:fruit_hub/features/home/presentation/views/home_view.dart';
 import 'package:fruit_hub/features/home/presentation/views/main_view.dart';
 import 'package:fruit_hub/features/home/presentation/views/best_selling_view.dart';
@@ -61,6 +62,10 @@ Route<dynamic>? onGenerateRoute(RouteSettings route) {
     case BestSellingView.routeName:
       return MaterialPageRoute(
         builder: (context) => const BestSellingView(),
+      );
+    case CheckoutView.routeName:
+      return MaterialPageRoute(
+        builder: (context) => const CheckoutView(),
       );
 
     default:

@@ -11,4 +11,5 @@ class AppRoutes {
   static const String productsView = 'products';
   static const String cartView = 'cart';
   static const String mostSellingView = 'mostSelling';
+  static const String checkoutView = 'checkout';
 }
