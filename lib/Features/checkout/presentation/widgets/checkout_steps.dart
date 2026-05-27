@@ -12,25 +12,18 @@ class CheckoutSteps extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: List.generate(
-        stepsItems.length,
+        getSteps().length,
         (index) => isActive
             ? ActiveStepItem(
-                title: stepsItems[index],
+                title: getSteps()[index],
               )
             : InactiveStepItem(
                 index: index,
-                title: stepsItems[index],
+                title: getSteps()[index],
               ),
       ),
     );
   }
-
-  final List<String> stepsItems = const [
-    'الشحن',
-    'الدفع',
-    'العنوان',
-    'المراجعة',
-  ];
 }
 
 class InactiveStepItem extends StatelessWidget {
@@ -88,3 +81,10 @@ class ActiveStepItem extends StatelessWidget {
     );
   }
 }
+
+List<String> getSteps() => const [
+  'الشحن',
+  'الدفع',
+  'العنوان',
+  'المراجعة',
+];

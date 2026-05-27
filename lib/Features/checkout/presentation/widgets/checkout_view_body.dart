@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:fruit_hub/Core/utils/widgets/custom_button.dart';
 
 import 'package:fruit_hub/features/auth/presentation/widgets/custom_app_bar.dart';
+import 'package:fruit_hub/features/checkout/presentation/widgets/checkout_page_view.dart';
 import 'package:fruit_hub/features/checkout/presentation/widgets/checkout_steps.dart';
 
 class CheckoutViewBody extends StatelessWidget {
@@ -8,19 +10,35 @@ class CheckoutViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
       children: <Widget>[
-        SizedBox(
+        const SizedBox(
           height: 30,
         ),
-        CustomAppBar(
+        const CustomAppBar(
           title: 'الشحن',
         ),
-        SizedBox(
+        const SizedBox(
           height: 16,
         ),
-        CheckoutSteps(
+        const CheckoutSteps(
           isActive: false,
+        ),
+        const SizedBox(
+          height: 32,
+        ),
+        const Expanded(
+          child: CheckoutPageView(),
+        ),
+        const SizedBox(
+          height: 92,
+        ),
+        CustomButton(
+          onPressed: () {},
+          title: 'التالي',
+        ),
+        const SizedBox(
+          height: 312,
         ),
       ],
     );
